@@ -107,4 +107,65 @@
   .busca-link:hover {
     color: #1565c0; /* Azul médio */
   }
+
+  /* Container dos radios */
+.radio-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* Estilo dos labels */
+.radio-label {
+  font-size: 1rem;
+  color: #424242; /* Cinza escuro */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Estilo do input radio */
+.radio-label input {
+  accent-color: #1e88e5; /* Azul para o radio */
+  cursor: pointer;
+}
+
+/* Container do autocomplete */
+.autocomplete-container {
+  position: relative;
+}
+
+/* Lista de sugestões */
+.autocomplete-sugestoes {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #bdbdbd; /* Borda cinza */
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 4px 0 0;
+  list-style: none;
+}
+
+/* Item da lista de sugestões */
+.autocomplete-item {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #424242;
+}
+
+.autocomplete-item:hover {
+  background-color: #e3f2fd; /* Azul claro */
+  color: #0d47a1; /* Azul escuro */
+}
+
+
   
