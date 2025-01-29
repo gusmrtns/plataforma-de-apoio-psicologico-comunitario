@@ -1,20 +1,29 @@
-
+import "../styles/login.css";
 
 const Login = () => {
   return (
-    <div>
-      <h1>Login</h1>
-      <form>
-        <label>
-          E-mail:
-          <input type="email" />
-        </label>
-        <label>
-          Senha:
-          <input type="password" />
-        </label>
-        <button type="submit">Entrar</button>
-      </form>
+    <div className="login-container">
+      <div className="login-form">
+        <h1>logomarca</h1>
+        <form>
+          <div className="form-group">
+            <label htmlFor="email">Usuário/e-mail:</label>
+            <input type="email" id="email" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Senha:</label>
+            <input type="password" id="password" />
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+        <p>Ainda não tem conta? <a href="#">Faça seu cadastro!</a></p>
+        <div className="links">
+          <a href="#">Preciso de ajuda</a> | <a href="#">Esqueci a senha</a>
+        </div>
+      </div>
+      <div className="footer">
+        <p>página inicial</p>
+      </div>
     </div>
   );
 };
