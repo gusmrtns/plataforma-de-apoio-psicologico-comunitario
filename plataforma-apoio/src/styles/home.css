@@ -1,28 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
 .container{
-    height: 100%;
-    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 .header-home{
-    display: flex;
+    position: relative;
     width: 100%;
-    border: 1px solid red;
+    height: 100%;
 }
 img{
     width: 100%;
-    height: 621px;
     object-fit: cover;
 }
-.header-text{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding: 3em;
-    background-color:  rgba(22, 73, 165, 50);    
-    & h1, h2, p{
-        color: white;
-    }
-    & h1{
-        font-size: 3em;
-    }
-    border: 1px solid red;
+.header-home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+
 }
+.header-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 530px; 
+    height: 400px;
+    display: flex;
+    margin-left: 5em;
+    margin-top: 10em;
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgba(22, 73, 165, 0.8);
+    color: white; 
+    padding: 20px;
+}
+
+.header-text h1, h2, p {
+    font-family: "Instrument Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+.header-text h1{
+    font-size: 2.5em;
+    color: #B9E1D9;
+}
+.header-text h2{
+    background-color: #D88656;
+    padding: 0.2em 1em;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0,9);
+    color: black;
+}
+.header-text p{
+    font-size: 1.3em;
+ }
