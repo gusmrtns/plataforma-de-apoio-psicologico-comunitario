@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import '../styles/CompAnam.css'
 
 function Inform() {
     const [uf, setUf] = useState("");

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import InputMask from "react-input-mask";
+import '../styles/CompAnam.css'
 
 function Pessoal() {
     const [nomeC, setNomeC] = useState("");

@@ -1,0 +1,51 @@
+input {
+    border-radius: 7px;
+    padding: 7px;
+}
+
+select {
+    border-radius: 7px;
+    padding: 7px;
+}
+
+textarea {
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 16px;
+    resize: none;
+}
+
+#nomeC, #nomeResp1, #nomeResp2 {
+    width: 69%;
+}
+
+#rua {
+    width: 45%;
+}
+
+#numero {
+    width: 15%;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center; 
+    gap: 5px;
+    padding: 15px;
+}
+
+.div-inputs-maior {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 15px;
+}
+
+.input-maior {
+    width: 60%;
+    height: 45px;
+}
+

@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import InputMask from "react-input-mask";
 import Pessoal from "../components/Pessoal";
 import Inform from "../components/Inform";
 import Historico from "../components/Historico";
+import '../styles/Anamnese.css'
 
 function Paciente() {
     const [cpf, setCpf] = useState("");

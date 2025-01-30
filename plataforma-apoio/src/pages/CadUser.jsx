@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
+import '../styles/CadUser.css'
 
 function User() {
     const [nome, setNome] = useState("");
@@ -55,46 +56,46 @@ function User() {
                 <div className="logo"></div>
                 <form>
                     <div className="divInput">
+                        <FaUser className="icons"/>
                         <input 
                         type="text" 
                         id="nome"
                         placeholder="Nome Completo"
                         onChange={validarNome}
                         required/>
-                        <FaUser/>
                     </div>
                     <div className="divInput">
+                        <MdAlternateEmail className="icons"/>
                         <input 
                         type="email" 
                         id="email" 
                         placeholder="E-mail"
                         onChange={validarEmail}
                         required/>
-                        <MdAlternateEmail/>
                     </div>
                     <div className="divInput">
+                        <RiLockPasswordFill className="icons"/>
                         <input 
                         type="password" 
                         id="senha" 
                         placeholder="Senha"
                         onChange={validarSenha}
                         required/>
-                        <RiLockPasswordFill/>
                     </div>
                     <div className="divInput">
+                        <RiLockPasswordFill className="icons"/>
                         <input 
                         type="password" 
                         id="senhaC" 
                         placeholder="Confirme sua senha"
                         onChange={validarConfirmacaoSenha}
                         required/>
-                        <RiLockPasswordFill/>
                     </div>
                     <button type="submit">Finalizar Cadastro</button>
                 </form>
                 <div id="divBotoes">
-                    <button>Página Inicial</button>
-                    <button>Prencher Anamnese</button>
+                    <button className="botao">Página Inicial</button>
+                    <button className="botao">Prencher Anamnese</button>
                 </div>
             </div>
        </>

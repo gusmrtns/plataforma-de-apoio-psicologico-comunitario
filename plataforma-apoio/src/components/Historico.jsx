@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import '../styles/CompAnam.css'
 
 function Historico() {
     const [probl, setProbl] = useState("");
