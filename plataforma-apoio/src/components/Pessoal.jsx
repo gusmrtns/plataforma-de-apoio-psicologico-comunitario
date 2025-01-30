@@ -31,7 +31,9 @@ function Pessoal() {
                         onChange={(e) => setNomeC(e.target.value)}
                         required
                         onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha com seu nome completo.")}
-                        onInput={(e) => e.target.setCustomValidity("")}/> <br />
+                        onInput={(e) => e.target.setCustomValidity("")}/>
+                    </div>
+                    <div className="inputs">
                         <InputMask
                         mask="999.999.999-99"
                         value={cpf}
@@ -68,6 +70,8 @@ function Pessoal() {
                         type="text" id="nomeResp1"
                         placeholder="Nome completo do Responsavél(opcional)"
                         onChange={(e) => setResp1(e.target.value)}/>
+                    </div>
+                    <div className="inputs">
                         <input 
                         type="text" id="nomeResp2"
                         placeholder="Nome completo do Responsavél(opcional)"
@@ -142,16 +146,16 @@ function Pessoal() {
                     </div>
                     <div className="inputs">
                         <label htmlFor="ocupacao">Ocupação Atual: </label>
-                        <input 
-                        type="text" id="ocupacao"
+                        <textarea 
+                        value={ocupacao} id="ocupacao"
                         onChange={(e) => setOcupacao(e.target.value)}/> <br />
                         <label htmlFor="moradia">Com quem você reside atualmente?</label> <br />
-                        <input 
-                        type="text" id="moradia" className="input-maior"
+                        <textarea 
+                        value={moradia} id="moradia" className="input-maior"
                         onChange={(e) => setMoradia(e.target.value)}/> <br />
                         <label htmlFor="conv">Como tem sido a convivência?</label> <br />
-                        <input 
-                        type="text" id="conv" className="input-maior"
+                        <textarea 
+                        value={conv} id="conv" className="input-maior"
                         onChange={(e) => setConv(e.target.value)}/>
                     </div>
                 </section>

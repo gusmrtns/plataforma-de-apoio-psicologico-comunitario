@@ -23,6 +23,7 @@ function Inform() {
                         <label htmlFor="uf">UF:</label>
                         <select id="uf" value={uf}
                         onChange={(e) => setUf(e.target.value)}>
+                            <option value="" disabled>Unidade Federativa</option>
                             <option value="ac">AC</option>
                             <option value="al">AL</option>
                             <option value="am">AM</option>
@@ -69,35 +70,35 @@ function Inform() {
                 <section>
                     <h2>Atendimento</h2>
                     <label htmlFor="motivo">Qual o principal motivo que o trouxe a terapia*?</label> <br/>
-                    <input type="text" id="motivo" className="input-maior"
+                    <textarea value={motivo} id="motivo" className="input-maior"
                     onChange={(e) => setMotivo(e.target.value)}
                     required
                     onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha o campo para prosseguir.")}
                     onInput={(e) => e.target.setCustomValidity("")}/> <br/>
                     <label htmlFor="percep">Como você percebe o problema e suas consequências na sua vida*?</label> <br/>
-                    <input type="text" id="percep" className="input-maior"
+                    <textarea value = {percep} id="percep" className="input-maior"
                     onChange={(e) => setPercep(e.target.value)}
                     required
                     onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha o campo para prosseguir.")}
                     onInput={(e) => e.target.setCustomValidity("")}/> <br/>
                     <label htmlFor="evoluc">Quando o problema começou e como evoluiu*?</label> <br/>
-                    <input type="text" id="evoluc" className="input-maior"
+                    <textarea value = {evoluc} id="evoluc" className="input-maior"
                     onChange={(e) => setEvoluc(e.target.value)}
                     required
                     onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha o campo para prosseguir.")}
                     onInput={(e) => e.target.setCustomValidity("")}/> <br/>
                     <label htmlFor="resolv">Você tentou resolver o problema antes*?</label> <br/>
-                    <input type="text" id="resolv" className="input-maior"
+                    <textarea value = {resolv} id="resolv" className="input-maior"
                     placeholder="Se sim, como?"
                     onChange={(e) => setResolv(e.target.value)} 
                     required
                     onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha o campo para prosseguir.")}
                     onInput={(e) => e.target.setCustomValidity("")}/> <br/>
                     <label htmlFor="afetVida">De que forma esse problema tem afetado sua vida?</label> <br/>
-                    <input type="text" id="afetVida" className="input-maior"
+                    <textarea value = {afetVida} id="afetVida" className="input-maior"
                     onChange={(e) => setAfetVida(e.target.value)} /> <br/>
                     <label htmlFor="histFami">Há histórico de transtornos psicológicos na família?</label> <br/>
-                    <input type="text" id="histFami" className="input-maior"
+                    <textarea value = {histFami} id="histFami" className="input-maior"
                     onChange={(e) => setHistFami(e.target.value)} /> <br/> 
                 </section>
             </div>
