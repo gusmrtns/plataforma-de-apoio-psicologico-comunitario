@@ -9,8 +9,9 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Busca from "./components/Busca";
 import "./styles/App.css";
-
-
+import Visualizar from './pages/visualizar';
+import Usuario from './pages/usuario';
+import Profi from './pages/profissional'
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           <Route path="/cadastroPaciente" element={<CadPaciente />} />
           <Route path="/anamnese" element={<Anamnese />} />
           <Route path="/ajuda" element={<Busca />} />
+          <Route path="/visualizar" element={<Visualizar />} />
+          <Route path="/usuario" element={<Usuario />} />
+          <Route path="/profissional" element={<Profi />} />
           <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
       </div>
