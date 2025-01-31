@@ -1,61 +1,88 @@
 .footer {
-    width: 100%;
-    height: 60px; /* Ajustando a altura */
-    background-color: #2C3E50; /* Tom escuro para contraste */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 60px; /* Ajustando a altura */
+  background-color: #2C3E50; /* Tom escuro para contraste */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  position: fixed; /* Mantendo fixo no final da tela */
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.footer .container-footer {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.container-footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #B9E1D9; /* Verde-água suave */
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;
+}
+
+.social-media a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #D88656; /* Laranja da paleta */
+}
+
+/* Adicionando espaço extra no body para o Footer */
+body {
+  padding-bottom: 80px; /* Maior que a altura do footer */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer .container-footer {
+      flex-direction: column;
+      text-align: center;
   }
-  
-  .footer .container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
+
   .footer-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+      flex-direction: column;
+      gap: 10px;
   }
-  
-  .footer-links li {
-    display: inline;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    color: #B9E1D9; /* Verde-água suave */
-  }
-  
-  .social-media {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .social-media a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .social-media a:hover {
-    color: #D88656; /* Laranja da paleta */
-  }
-  
+}

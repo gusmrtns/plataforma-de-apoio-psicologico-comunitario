@@ -13,14 +13,27 @@
     z-index: 1000;
   }
   
-  .navbar .container {
+  .navbar .container-navbar {
     width: 100%;
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-  }
+    background-color: #5D87D2;
+}
+
+.container-navbar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative; /* Garante que não sobreponha nada */
+  z-index: 1; /* Mantém ela abaixo da navbar */
+}
+
+
   
   .logo {
     font-size: 1.5rem;
@@ -67,3 +80,12 @@
     background-color: #D9B9A0; /* Bege-claro */
   }
   
+  body {
+    padding-top: 60px; /* Ajustando para a altura da navbar */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      gap: 15px;
+  }
+}
