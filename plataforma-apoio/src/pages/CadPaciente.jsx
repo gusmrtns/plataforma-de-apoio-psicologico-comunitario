@@ -53,7 +53,7 @@ function CadPaciente() {
     };
 
     const handleSubmit = (e) => {
-        alert("Formulário enviado com sucesso!");
+        alert("Cadastro de paciente realizado com sucesso!");
         navigate("/anamnese");
     };
 

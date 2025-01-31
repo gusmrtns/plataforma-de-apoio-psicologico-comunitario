@@ -12,7 +12,7 @@ function Anamnese() {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        alert("Formulário enviado com sucesso!");
+        alert("Anamnese realizada com sucesso!");
         navigate("/usuario");
     };
 
