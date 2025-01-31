@@ -1,11 +1,30 @@
 input {
     border-radius: 7px;
     padding: 7px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #escolaridade, #estCivil, #filhos, #uf {
     border-radius: 7px;
     padding: 7px;
+}
+
+#rg, #cpf, #celular, #nacao {
+    width: 150px;
+}
+
+#genero, #orientSex {
+    width: 200px;
+}
+
+#nascimento {
+    width: 150px;
+    height: 35px;
 }
 
 textarea {
@@ -27,12 +46,34 @@ textarea {
     width: 15%;
 }
 
+.inputs-select {
+    display: inline-block;
+    gap: 5px;
+    padding: 15px;
+}
+
+.inputs-endereco {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+.inputs-endereco label {
+    margin-top: -5px;
+}
+
 .inputs {
     display: flex;
     justify-content: space-evenly; 
     align-items: center; 
-    gap: 5px;
+    gap: 10px;
     padding: 15px;
+}
+
+.inputs input {
+    max-height: 30px;
 }
 
 .div-inputs-maior {

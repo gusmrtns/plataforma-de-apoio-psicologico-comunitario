@@ -102,7 +102,7 @@ function CadPaciente() {
                         <Link to="/anamnese">
                             <button className="botao">Prencher Anamnese</button>
                         </Link>
-                </div>
+                    </div>
                 </div>
             </div>
        </>
