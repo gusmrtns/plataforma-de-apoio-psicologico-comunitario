@@ -20,7 +20,7 @@ function Inform() {
             <div id="informs">
                 <section>
                     <h2>Endereço</h2>
-                    <div className="inputs">
+                    <div className="inputs-endereco">
                         <label htmlFor="uf">UF:</label>
                         <select id="uf" value={uf}
                         onChange={(e) => setUf(e.target.value)}>
@@ -59,7 +59,7 @@ function Inform() {
                         <input type="text" id="bairro"
                         onChange={(e) => setBairro(e.target.value)} />
                     </div>
-                    <div className="inputs">
+                    <div className="inputs-endereco">
                         <label htmlFor="rua">Rua:</label>
                         <input type="text" id="rua"
                         onChange={(e) => setRua(e.target.value)} />

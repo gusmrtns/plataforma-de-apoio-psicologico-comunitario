@@ -19,14 +19,14 @@ function Anamnese() {
     return (
         <>
             <div className="anamnese-container">
-                <form onSubmit={handleSubmit}>
+                <form id="divform-anam" onSubmit={handleSubmit}>
                     <h1>Anamnese Básica</h1>
                     <Pessoal/> 
                     <Inform/>
                     <Historico/>
-                    <button type="submit">Finalizar Anamnese</button>
+                    <button className="botao" type="submit">Finalizar Anamnese</button>
                 </form>
-                <div id="divBotoes">
+                <div id="divBotao">
                     <Link to="/">
                         <button className="botao">Página Inicial</button>
                     </Link>

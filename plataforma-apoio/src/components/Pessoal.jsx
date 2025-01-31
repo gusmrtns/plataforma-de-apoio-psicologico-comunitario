@@ -41,7 +41,7 @@ function Pessoal() {
                         onChange={(e) => setCpf(e.target.value)}
                         onInvalid={(e) => e.target.setCustomValidity("Por favor, insira um CPF válido.")}
                         onInput={(e) => e.target.setCustomValidity("")}>
-                            {(inputProps) => <input {...inputProps} type="text" placeholder="CPF" required />}
+                            {(inputProps) => <input {...inputProps} id="cpf" type="text" placeholder="CPF" required />}
                         </InputMask>
                         <InputMask
                         mask="99999999-9"
@@ -49,7 +49,7 @@ function Pessoal() {
                         onChange={(e) => setRg(e.target.value)}
                         onInvalid={(e) => e.target.setCustomValidity("Por favor, insira um RG válido.")}
                         onInput={(e) => e.target.setCustomValidity("")}>
-                            {(inputProps) => <input {...inputProps} type="text" placeholder="RG" required/>}
+                            {(inputProps) => <input {...inputProps} id="rg" type="text" placeholder="RG" required/>}
                         </InputMask>
                     </div>
                     <div className="inputs">
@@ -59,7 +59,7 @@ function Pessoal() {
                         onChange={(e) => setCelular(e.target.value)}
                         onInvalid={(e) => e.target.setCustomValidity("Por favor, insira um Número de Celular válido.")}
                         onInput={(e) => e.target.setCustomValidity("")}>
-                            {(inputProps) => <input {...inputProps} type="text" placeholder="Celular" required />}
+                            {(inputProps) => <input {...inputProps} id="celular" type="text" placeholder="Celular" required />}
                         </InputMask>
                         <input 
                         type="text" id="nacao"
@@ -90,7 +90,7 @@ function Pessoal() {
                     </div>
                 </section>
                 <section>
-                    <div className="inputs">
+                    <div className="inputs-select">
                         <label htmlFor="nascimento">Data de Nascimento*: </label>
                         <input type="date" id="nascimento"
                         onChange={(e) => setNascimento(e.target.value)}
@@ -114,7 +114,7 @@ function Pessoal() {
                             <option value="posC">Pós-Graduação Completo</option>
                         </select>
                     </div>
-                    <div className="inputs">
+                    <div className="inputs-select">
                         <label htmlFor="estCivil">Estado Civil*: </label>
                         <select id="estCivil" value={estCivil}
                         onChange={(e) => setEstCivil(e.target.value)}
@@ -145,7 +145,7 @@ function Pessoal() {
                             <option value="4+">Mais de 4 filhos(as)</option>
                         </select>
                     </div>
-                    <div className="inputs">
+                    <div className="inputs-maior">
                         <label htmlFor="ocupacao">Ocupação Atual: </label>
                         <textarea 
                         value={ocupacao} id="ocupacao" className="input-maior"
