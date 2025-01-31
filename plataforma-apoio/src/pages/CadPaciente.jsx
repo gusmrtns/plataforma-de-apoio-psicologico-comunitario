@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import '../styles/CadUser.css'
+import { Link } from "react-router-dom"
+import '../styles/CadPaciente.css'
 
-function User() {
+function CadPaciente() {
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
@@ -94,12 +95,16 @@ function User() {
                     <button type="submit">Finalizar Cadastro</button>
                 </form>
                 <div id="divBotoes">
-                    <button className="botao">Página Inicial</button>
-                    <button className="botao">Prencher Anamnese</button>
+                    <Link to="/">
+                        <button className="botao">Página Inicial</button>
+                    </Link>
+                    <Link to="/anamnese">
+                        <button className="botao">Prencher Anamnese</button>
+                    </Link>
                 </div>
             </div>
        </>
     )
 }
 
-export default User;
+export default CadPaciente;
