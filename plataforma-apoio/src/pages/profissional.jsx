@@ -1,0 +1,74 @@
+import "../styles/profissional.css";
+
+const Profi = () => {
+    return (
+    <body>
+    <main class="separar_quad">
+        <section class="sep">
+            <div class="quadrado1">
+                <div class="prof">
+                    <div class="imagem_perfil"><p>imagem de perfil do usuário</p></div>
+                    <h1>Nome do profissional</h1>
+                    <h3>Consultas realizadas:</h3>
+                    <div class="numero"><p>0</p></div>
+                </div>
+
+            </div>
+            <div class="dados">
+                <div class="top_tit"><h1>Dados profissionais</h1></div>
+                <div class="info">
+                    <div>
+                        <h1 class="nome">Dr. Lucas Oliveira Andrade</h1>
+                    </div>
+                    <h2>CRM: CRP 01/XXXXX</h2>
+                    <h2>CPF: 087......07</h2>
+                    <h2>RG: 098......04</h2>
+                    <h2>Data de nascimento: 23/05/1995</h2>
+                    <button class="edit"><h1>Editar perfil</h1></button>
+                </div>
+            </div>
+        </section>
+        <nav>
+            <button><h1>Notificações</h1></button>
+            <button><h1>Agenda</h1></button>
+            <button><h1>Página inícial</h1></button>
+            <button><h1>Histórico</h1></button>
+        </nav>
+        <section class="apresent">
+            <h1>Sobre mim:</h1>
+            <div>
+                <h2>Olá! Sou o Dr. Lucas Oliveira Andrade, psicólogo especializado em Psicoterapia Cognitivo-Comportamental. Com mais de 10 anos de experiência, ajudo pessoas a superarem desafios emocionais, promovendo bem-estar e qualidade de vida.
+                    Minha abordagem foca em identificar e modificar pensamentos e comportamentos disfuncionais, tratando questões como ansiedade e depressão. Atendo adultos e adolescentes em Fortaleza, Ceará, oferecendo um ambiente seguro e acolhedor para o crescimento pessoal.
+                    Seja bem-vindo(a) ao meu espaço terapêutico. Juntos, podemos construir uma vida mais equilibrada e satisfatória.</h2>
+            </div>
+            <div class="alinhamento">
+                <div>
+                    <h2>Formação:</h2>
+                <div class="capsula"><h1>Psicologo</h1></div>
+                </div>
+                <div>
+                    <h1>Abordagem terapêutica:</h1>
+                <div class="capsula"><h1>Psicoterapia Cognitivo-Comportamental</h1></div>
+                </div>
+                <h1>Especialidade:</h1>
+                <div class="aling">
+                    <div class="capsula"><h1> Ansiedade</h1></div><div class="capsula"><h1>Depressão</h1></div><div class="capsula"><h1>Transtorno de Ansiedade Generalizada (TAG)</h1></div><div class="capsula"><h1>Transtorno de Pânico</h1></div><div class="capsula"><h1>Fobia Social</h1></div><div class="capsula"><h1> Estresse Pós-Traumático</h1></div><div class="capsula"><h1>Trans. obsessivo-Compulsivo</h1></div>
+                </div>
+                <div>
+                    <h1>Faixa etária:</h1>
+                    <div class="capsula"><h1>Adultos e Adolescentes</h1></div>
+                </div>
+                <div>
+                    <h1>Localidade de atuação:</h1>
+                <div class="capsula"><h1> Fortaleza, Ceará, Brasil</h1></div>
+                </div>
+                <div>
+                    <h1>tempo de atuação:</h1>
+                    <div class="capsula"><h1>10 anos</h1></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    </body>
+    )
+}
