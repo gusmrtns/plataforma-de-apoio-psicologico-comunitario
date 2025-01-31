@@ -2,7 +2,7 @@ import "../styles/usuario.css";
 
 const Usuario = () => {
     return (
-    <body>
+    <div className="user_body">
     <main class="divisor_cont">
     <section class="container_1">
         <div class="quadro_1">
@@ -63,7 +63,9 @@ const Usuario = () => {
             <button class="edit"><h1>Editar perfil</h1></button>
     </section>
     </main>
-    </body>
+    </div>
     )
     
 }
+
+export default Usuario;

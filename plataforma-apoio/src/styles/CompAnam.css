@@ -3,7 +3,7 @@ input {
     padding: 7px;
 }
 
-select {
+#escolaridade, #estCivil, #filhos, #uf {
     border-radius: 7px;
     padding: 7px;
 }
@@ -47,5 +47,6 @@ textarea {
 .input-maior {
     width: 60%;
     height: 45px;
+    resize: none;
 }
 

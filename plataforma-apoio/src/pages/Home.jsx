@@ -1,11 +1,10 @@
-import Busca from "../components/Busca";
 import "../styles/home.css"
 
 
 const Home = () => {
   return (
     <div className="home-wrapper">
-      <div className="container">
+      <div className="container-home">
         <div className="header-home">
           <img src="./src/assets/homeheader.jpg" alt="imagem header" />
         </div>
@@ -15,9 +14,6 @@ const Home = () => {
           <p>Apoiamos sua jornada rumo ao equilíbrio emocional e ao sucesso, ajudando você a alcançar a melhor versão de si <spam>mesmo.</spam></p>
         </div>
       </div>
-      <div className="busca">
-          <Busca/>
-        </div>
     </div>
   );
 };

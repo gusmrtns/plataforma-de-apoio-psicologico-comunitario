@@ -1,4 +1,4 @@
-body {
+.visu_body {
     margin: 30px;
     padding: 0;
     display: flex;
@@ -48,7 +48,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     height: 30px;
     width: auto;
     background-color: #E2AB77;
@@ -117,5 +117,10 @@ body {
 .cima {
     display: flex;
     gap: 1000px;
+    white-space: nowrap;
+}
+.baixo { 
+    display: flex;
+    gap: 800px;
     white-space: nowrap;
 }

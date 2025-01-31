@@ -4,7 +4,7 @@ import "../styles/Footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="container-footer">
         <p>&copy; 2024 Plataforma de Apoio Psicológico Comunitário</p>
         <ul className="footer-links">
           <li><Link to="/termos">Termos de Uso</Link></li>

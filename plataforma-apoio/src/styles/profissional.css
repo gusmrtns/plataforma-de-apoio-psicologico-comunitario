@@ -1,4 +1,4 @@
-body {
+.body_prof {
     margin: 30px;
     padding: 0;
     display: flex;
@@ -82,7 +82,10 @@ body {
     padding: 20px;
     
 }
-
+.h2 {
+    text-align: left;
+    font-size: x-large;
+}
 .edit {
     display: flex;
     justify-content: center;

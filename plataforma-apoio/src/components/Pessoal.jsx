@@ -148,7 +148,7 @@ function Pessoal() {
                     <div className="inputs">
                         <label htmlFor="ocupacao">Ocupação Atual: </label>
                         <textarea 
-                        value={ocupacao} id="ocupacao"
+                        value={ocupacao} id="ocupacao" className="input-maior"
                         onChange={(e) => setOcupacao(e.target.value)}/> <br />
                         <label htmlFor="moradia">Com quem você reside atualmente?</label> <br />
                         <textarea 

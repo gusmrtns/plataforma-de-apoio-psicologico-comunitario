@@ -2,9 +2,10 @@ import React, {useState} from "react";
 import Pessoal from "../components/Pessoal";
 import Inform from "../components/Inform";
 import Historico from "../components/Historico";
+import { Link } from "react-router-dom"
 import '../styles/Anamnese.css'
 
-function Paciente() {
+function Anamnese() {
     const [cpf, setCpf] = useState("");
     const [rg, setRg] = useState("");
     const [celular, setCelular] = useState("");
@@ -17,7 +18,7 @@ function Paciente() {
 
     return (
         <>
-            <div className="container">
+            <div className="anamnese-container">
                 <form onSubmit={handleSubmit}>
                     <h1>Anamnese Básica</h1>
                     <Pessoal/> 
@@ -26,11 +27,13 @@ function Paciente() {
                     <button type="submit">Finalizar Anamnese</button>
                 </form>
                 <div id="divBotoes">
-                    <button>Página Inicial</button>
+                    <Link to="/">
+                        <button className="botao">Página Inicial</button>
+                    </Link>
                 </div>
             </div>
         </>
     )
 }
 
-export default Paciente;
+export default Anamnese;

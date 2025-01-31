@@ -2,7 +2,7 @@ import "../styles/profissional.css";
 
 const Profi = () => {
     return (
-    <body>
+    <div className="body_prof">
     <main class="separar_quad">
         <section class="sep">
             <div class="quadrado1">
@@ -20,10 +20,10 @@ const Profi = () => {
                     <div>
                         <h1 class="nome">Dr. Lucas Oliveira Andrade</h1>
                     </div>
-                    <h2>CRM: CRP 01/XXXXX</h2>
-                    <h2>CPF: 087......07</h2>
-                    <h2>RG: 098......04</h2>
-                    <h2>Data de nascimento: 23/05/1995</h2>
+                    <h2 className="h2">CRM: CRP 01/XXXXX</h2>
+                    <h2 className="h2">CPF: 087......07</h2>
+                    <h2 className="h2">RG: 098......04</h2>
+                    <h2 className="h2">Data de nascimento: 23/05/1995</h2>
                     <button class="edit"><h1>Editar perfil</h1></button>
                 </div>
             </div>
@@ -43,7 +43,7 @@ const Profi = () => {
             </div>
             <div class="alinhamento">
                 <div>
-                    <h2>Formação:</h2>
+                    <h1>Formação:</h1>
                 <div class="capsula"><h1>Psicologo</h1></div>
                 </div>
                 <div>
@@ -69,6 +69,8 @@ const Profi = () => {
             </div>
         </section>
     </main>
-    </body>
+    </div>
     )
 }
+
+export default Profi;
