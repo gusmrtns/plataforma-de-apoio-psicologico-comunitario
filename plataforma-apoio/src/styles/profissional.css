@@ -1,0 +1,167 @@
+.body_prof {
+    margin: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #F1E7DD;
+}
+
+.separar_quad {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    justify-content: center;
+}
+
+.quadrado1 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 632px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 22px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);  /*Sombra preta com 30% de opacidade */
+}
+.numero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    background-color: #5D87D2;
+}
+.sep {
+    display: flex;
+    gap: 30px;
+}
+.prof {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+    
+}
+.imagem_perfil {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 322px;
+    height: 322px;
+    border-radius: 50%;
+    background-color: #5D87D2;
+}
+
+.dados {
+    height: 515px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(252, 244, 234);
+    border-radius: 12px;
+    border: 2px solid; /* Define a largura e o estilo da borda */
+    border-color: black;
+    padding-bottom: 22px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nome {
+    
+    font-size: 50px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+}
+.h2 {
+    text-align: left;
+    font-size: x-large;
+}
+.edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 304px;
+    height: 50px;
+    background-color: #E2AB77;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    left: 35%;
+}
+.top_tit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: #E2AB77;
+    border-radius: 12px 12px 0 0;
+}
+
+.apresent {
+    padding: 30px;
+    height: 1050px;
+    width: 1632px;
+    background-color: #F4D9BD;
+    border: 2px solid; /* Define a largura e o estilo da borda */
+    border-color: black;
+    border-radius: 22px;
+}
+
+nav {
+    display: flex;
+    gap: 26px;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 404px;
+    height: 50px;
+    background-color: #E2AB77;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+button:hover {
+    background-color: #C68C56; /* Azul escuro */
+  }
+
+  .capsula {
+    display: inline-flex; /* Define o contêiner como inline-flex */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 30px;
+    width: auto; /* Permite que a largura se ajuste ao conteúdo */
+    background-color: #D9B9A0;
+    border-radius: 22px;
+    
+  }
+
+  .aling {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+  }
+
+.alinhamento {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+}
