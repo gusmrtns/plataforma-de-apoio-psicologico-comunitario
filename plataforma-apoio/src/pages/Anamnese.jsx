@@ -2,18 +2,18 @@ import React, {useState} from "react";
 import Pessoal from "../components/Pessoal";
 import Inform from "../components/Inform";
 import Historico from "../components/Historico";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import '../styles/Anamnese.css'
 
 function Anamnese() {
     const [cpf, setCpf] = useState("");
     const [rg, setRg] = useState("");
     const [celular, setCelular] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-
-        alert("Formulário enviado com sucesso!");
+        alert("Anamnese realizada com sucesso!");
+        navigate("/usuario");
     };
 
     return (
@@ -24,11 +24,11 @@ function Anamnese() {
                     <Pessoal/> 
                     <Inform/>
                     <Historico/>
-                    <button className="botao" type="submit">Finalizar Anamnese</button>
+                    <button className="botao-anamnese" type="submit">Finalizar Anamnese</button>
                 </form>
                 <div id="divBotao">
                     <Link to="/">
-                        <button className="botao">Página Inicial</button>
+                        <button className="botao-anamnese">Página Inicial</button>
                     </Link>
                 </div>
             </div>

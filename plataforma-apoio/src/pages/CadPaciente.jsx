@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import '../styles/CadPaciente.css'
 
 function CadPaciente() {
@@ -10,6 +10,7 @@ function CadPaciente() {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [senhaConf, setSenhaConf] = useState("");
+    const navigate = useNavigate();
 
     const validarNome = (e) => {
         const nomeValor = e.target.value;
@@ -51,12 +52,17 @@ function CadPaciente() {
         }
     };
 
+    const handleSubmit = (e) => {
+        alert("Cadastro de paciente realizado com sucesso!");
+        navigate("/anamnese");
+    };
+
     return (
        <>
             <div className="container-cad-paciente">
                 <div id="div-form">
                     <div className="logo"></div>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="divInput">
                             <FaUser className="icons"/>
                             <input 
@@ -93,14 +99,14 @@ function CadPaciente() {
                             onChange={validarConfirmacaoSenha}
                             required/>
                         </div>
-                        <button className="botao" type="submit">Finalizar Cadastro</button>
+                        <button className="botao-paciente" type="submit">Finalizar Anamnese</button>
                     </form>
                     <div id="divBotoes">
                         <Link to="/">
-                            <button className="botao">Página Inicial</button>
+                            <button className="botao-paciente">Página Inicial</button>
                         </Link>
                         <Link to="/anamnese">
-                            <button className="botao">Prencher Anamnese</button>
+                            <button className="botao-paciente">Prencher Anamnese</button>
                         </Link>
                     </div>
                 </div>
