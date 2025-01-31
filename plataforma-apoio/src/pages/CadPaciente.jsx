@@ -53,54 +53,56 @@ function CadPaciente() {
 
     return (
        <>
-            <div className="container">
-                <div className="logo"></div>
-                <form>
-                    <div className="divInput">
-                        <FaUser className="icons"/>
-                        <input 
-                        type="text" 
-                        id="nome"
-                        placeholder="Nome Completo"
-                        onChange={validarNome}
-                        required/>
-                    </div>
-                    <div className="divInput">
-                        <MdAlternateEmail className="icons"/>
-                        <input 
-                        type="email" 
-                        id="email" 
-                        placeholder="E-mail"
-                        onChange={validarEmail}
-                        required/>
-                    </div>
-                    <div className="divInput">
-                        <RiLockPasswordFill className="icons"/>
-                        <input 
-                        type="password" 
-                        id="senha" 
-                        placeholder="Senha"
-                        onChange={validarSenha}
-                        required/>
-                    </div>
-                    <div className="divInput">
-                        <RiLockPasswordFill className="icons"/>
-                        <input 
-                        type="password" 
-                        id="senhaC" 
-                        placeholder="Confirme sua senha"
-                        onChange={validarConfirmacaoSenha}
-                        required/>
-                    </div>
-                    <button type="submit">Finalizar Cadastro</button>
-                </form>
-                <div id="divBotoes">
-                    <Link to="/">
-                        <button className="botao">Página Inicial</button>
-                    </Link>
-                    <Link to="/anamnese">
-                        <button className="botao">Prencher Anamnese</button>
-                    </Link>
+            <div className="container-cad-paciente">
+                <div id="div-form">
+                    <div className="logo"></div>
+                    <form>
+                        <div className="divInput">
+                            <FaUser className="icons"/>
+                            <input 
+                            type="text" 
+                            id="nome"
+                            placeholder="Nome Completo"
+                            onChange={validarNome}
+                            required/>
+                        </div>
+                        <div className="divInput">
+                            <MdAlternateEmail className="icons"/>
+                            <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="E-mail"
+                            onChange={validarEmail}
+                            required/>
+                        </div>
+                        <div className="divInput">
+                            <RiLockPasswordFill className="icons"/>
+                            <input 
+                            type="password" 
+                            id="senha" 
+                            placeholder="Senha"
+                            onChange={validarSenha}
+                            required/>
+                        </div>
+                        <div className="divInput">
+                            <RiLockPasswordFill className="icons"/>
+                            <input 
+                            type="password" 
+                            id="senhaC" 
+                            placeholder="Confirme sua senha"
+                            onChange={validarConfirmacaoSenha}
+                            required/>
+                        </div>
+                        <button className="botao" type="submit">Finalizar Cadastro</button>
+                    </form>
+                    <div id="divBotoes">
+                        <Link to="/">
+                            <button className="botao">Página Inicial</button>
+                        </Link>
+                        <Link to="/anamnese">
+                            <button className="botao">Prencher Anamnese</button>
+                        </Link>
+                </div>
                 </div>
             </div>
        </>
