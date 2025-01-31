@@ -79,10 +79,6 @@
   .btn-ajuda:hover {
     background-color: #D9B9A0; /* Bege-claro */
   }
-  
-  body {
-    padding-top: 60px; /* Ajustando para a altura da navbar */
-}
 
 @media (max-width: 768px) {
   .nav-links {

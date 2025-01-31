@@ -9,14 +9,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
-/* Ajuste na estrutura do body e do conteúdo principal */
-html, body {
-  height: 100%;
-  overflow-y: auto;
-  margin: 0;
-  padding: 0;
-}
-
 .main-content {
   min-height: 100vh; /* Garante que ocupe toda a tela */
   display: flex;

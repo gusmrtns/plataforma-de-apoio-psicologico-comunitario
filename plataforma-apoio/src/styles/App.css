@@ -1,11 +1,3 @@
-/* Garante que o conteúdo comece abaixo da Navbar */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-y: auto;
-}
-
 /* Ajuste para o conteúdo principal */
 .main-content-app {
   min-height: 100vh; /* Mantém a altura mínima */
