@@ -18,7 +18,7 @@ function Anamnese() {
 
     return (
         <>
-            <div className="container">
+            <div className="anamnese-container">
                 <form onSubmit={handleSubmit}>
                     <h1>Anamnese Básica</h1>
                     <Pessoal/> 
