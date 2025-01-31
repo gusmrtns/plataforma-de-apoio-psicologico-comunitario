@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/cadastroProfissional.css";
 
 const CadastroProfissional = () => {
@@ -36,7 +36,7 @@ const CadastroProfissional = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-cadastro-profissional">
       <h2>Cadastro Profissional</h2>
       <form onSubmit={handleSubmit}>
         <label>Nome completo:</label>

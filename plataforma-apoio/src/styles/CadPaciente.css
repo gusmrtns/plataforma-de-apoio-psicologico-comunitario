@@ -1,13 +1,4 @@
-body {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
+.container-cadastro-paciente {
     width: 100%;
     max-width: 700px;
     background-color: #D9B9A0;

@@ -1,15 +1,37 @@
-
-.container {
-  max-width: 100vh;
-  max-height:100vh;
+.container-cadastro-profissional {
+  width: 80%; /* Mantém uma largura responsiva */
+  max-width: 900px; /* Define um limite para evitar exageros */
+  margin: 40px auto; /* Ajusta a margem para evitar gaps desnecessários */
   padding: 20px;
   font-family: Arial, sans-serif;
+  background-color: #d2a07f; /* Cor de fundo */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
+
+/* Ajuste na estrutura do body e do conteúdo principal */
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  min-height: 100vh; /* Garante que ocupe toda a tela */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Evita compressão do formulário */
+  padding-bottom: 80px; /* Mantém espaço para o footer */
+  padding-top: 80px; /* Ajuste para não ficar atrás da navbar */
+}
+
 
 h2 {
   text-align: center;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -34,7 +56,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
-  box-sizing: border-box; /* Garante que padding não ultrapasse a largura definida */
+  box-sizing: border-box; /* Garante que padding não ultrapasse a largura */
 }
 
 input[type="date"] {

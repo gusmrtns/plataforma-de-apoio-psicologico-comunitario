@@ -6,8 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
-  position: fixed; /* Mantendo fixo no final da tela */
+  padding: 0 20px; /* Mantendo fixo no final da tela */
   bottom: 0;
   left: 0;
   z-index: 1001;
@@ -69,10 +68,6 @@
   color: #D88656; /* Laranja da paleta */
 }
 
-/* Adicionando espaço extra no body para o Footer */
-body {
-  padding-bottom: 80px; /* Maior que a altura do footer */
-}
 
 /* Responsividade */
 @media (max-width: 768px) {

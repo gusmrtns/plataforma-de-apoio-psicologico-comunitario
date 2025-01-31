@@ -1,6 +1,17 @@
-
-body {
+/* Garante que o conteúdo comece abaixo da Navbar */
+html, body {
+  height: 100%;
   margin: 0;
-  padding-bottom: 80px; /* Espaço suficiente para o footer */
-  background-color: white;
+  padding: 0;
+  overflow-y: auto;
+}
+
+/* Ajuste para o conteúdo principal */
+.main-content-app {
+  min-height: 100vh; /* Mantém a altura mínima */
+  padding-top: 80px; /* Espaço para evitar sobreposição da Navbar */
+  padding-bottom: 80px; /* Espaço para evitar sobreposição do Footer */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
