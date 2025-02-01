@@ -87,7 +87,7 @@ O projeto será desenvolvido com foco em tecnologias modernas, incluindo:
 
 - **Gabriel Silveira** – Desenvolvimento das páginas **Cadastro de Paciente** (`CadPaciente.jsx`) e **Anamnese** (`Anamnese.jsx`).  
 - **Gustavo Martins** – Implementação dos componentes **NavBar** (`NavBar.jsx`), **Footer** (`Footer.jsx`) e **Busca** (`Busca.jsx`).  
-- **João Wesley** – Desenvolvimento das páginas **Paciente Logado** (`usuario.jsx`) e **Profissional Logado** (`profissional.jsx`).  
+- **João Wesley** – Desenvolvimento das páginas **Paciente Logado** (`usuario.jsx`), **Profissional Logado** (`profissional.jsx`) e **Visualizar Conta Completa do Profissional** (`visualizar.jsx`).  
 - **Jonata Monteiro** – Desenvolvimento da **Página Home** (`Home.jsx`) e contribuição no componente **Busca** (`Busca.jsx`).  
 - **Matheus Freires** – Desenvolvimento das páginas **Login** (`Login.jsx`) e **Cadastro de Profissional** (`CadastroProfissional.jsx`).
 
