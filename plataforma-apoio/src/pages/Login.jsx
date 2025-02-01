@@ -21,9 +21,6 @@ const Login = () => {
           <a href="#">Preciso de ajuda</a> | <a href="#">Esqueci a senha</a>
         </div>
       </div>
-      <div className="footer">
-        <p>página inicial</p>
-      </div>
     </div>
   );
 };

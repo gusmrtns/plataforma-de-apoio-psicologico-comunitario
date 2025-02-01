@@ -118,11 +118,11 @@
     border-radius: 22px;
 }
 
-nav {
+.body_prof nav {
     display: flex;
     gap: 26px;
 }
-button {
+.body_prof button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,7 +135,7 @@ button {
     transition: background-color 0.3s;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
-button:hover {
+.body_prof button:hover {
     background-color: #C68C56; /* Azul escuro */
   }
 

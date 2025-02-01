@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 /* Ajuste para o conteúdo principal */
 .main-content-app {
   min-height: 100vh; /* Mantém a altura mínima */
@@ -6,4 +7,12 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Instrument Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
