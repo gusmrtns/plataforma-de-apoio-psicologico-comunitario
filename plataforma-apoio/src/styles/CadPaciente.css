@@ -46,6 +46,7 @@ input {
     cursor: pointer;
     transition: background-color 0.3s;
     border: none;
+    margin: 10px;
 }
 
 .botao-paciente :hover {
