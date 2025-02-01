@@ -24,9 +24,11 @@ function Anamnese() {
                     <Pessoal/> 
                     <Inform/>
                     <Historico/>
-                    <button className="botao-anamnese" type="submit">Finalizar Anamnese</button>
+                    <div className="divBotao">
+                        <button className="botao-anamnese" type="submit">Finalizar Anamnese</button>
+                    </div>
                 </form>
-                <div id="divBotao">
+                <div className="divBotao">
                     <Link to="/">
                         <button className="botao-anamnese">Página Inicial</button>
                     </Link>

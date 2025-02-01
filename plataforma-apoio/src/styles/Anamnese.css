@@ -15,7 +15,6 @@
     border-radius: 12px; 
     overflow: hidden; 
     box-sizing: border-box;
-    position: relative;
 }
 
 #divform-anam {
@@ -29,10 +28,22 @@
     position: relative;
 }
 
-#divBotao {
-    margin-top: -15px;
+.divBotao {
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.botao {
-    margin: 15px;
+.botao-anamnese {
+    width: 200px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.botao-anamnese :hover {
+    background-color: #0069d9;
 }

@@ -99,7 +99,7 @@ function CadPaciente() {
                             onChange={validarConfirmacaoSenha}
                             required/>
                         </div>
-                        <button className="botao-paciente" type="submit">Finalizar Anamnese</button>
+                        <button className="botao-paciente" type="submit">Finalizar Cadastro</button>
                     </form>
                     <div id="divBotoes">
                         <Link to="/">
