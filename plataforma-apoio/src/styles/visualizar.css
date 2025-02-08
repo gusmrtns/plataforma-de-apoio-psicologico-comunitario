@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F1E7DD;
+    
 }
 
 .divisor {
@@ -73,8 +73,8 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    height: 750px;
-    width: 1402px;
+    height: 800px;
+    width: 1413px;
     
     align-items: center;
     background-color: #F4D9BD;
@@ -83,6 +83,7 @@
 }
 
 .alinhamento {
+    align-items: center;
     justify-items: center;
 }
 .apresenta {
