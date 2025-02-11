@@ -63,3 +63,29 @@
 .header-text p{
     font-size: 1.3em;
  }
+.aboutus{
+    margin-top: 8em;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4em;
+}
+.about{
+    background-color: #D88656;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & h2{
+        font-size: 1.5em;
+        color: black;
+    }
+
+    & .bx-health, .bxs-wallet, .bxs-calendar, .bxs-face{
+        color: black;
+        font-size:3em;
+    }
+}
