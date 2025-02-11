@@ -1,25 +1,36 @@
-.container-cadastro-profissional {
-  width: 80%; /* Mantém uma largura responsiva */
-  max-width: 900px; /* Define um limite para evitar exageros */
-  margin: 40px auto; /* Ajusta a margem para evitar gaps desnecessários */
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  background-color: #d2a07f; /* Cor de fundo */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+/* Estilo do fundo fixo */
+.background-container {
+  position: fixed; /* Garante que o fundo cubra toda a tela */
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url(https://images.pexels.com/photos/5699466/pexels-photo-5699466.jpeg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Mantém o fundo atrás do conteúdo */
 }
 
-.main-content {
-  min-height: 100vh; /* Garante que ocupe toda a tela */
+/* Estilo do container do formulário */
+.container-cadastro-profissional {
+  position: relative; /* Mantém o formulário sobre o fundo */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start; /* Evita compressão do formulário */
-  padding-bottom: 80px; /* Mantém espaço para o footer */
-  padding-top: 80px; /* Ajuste para não ficar atrás da navbar */
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  background-color: #fff; /* Fundo branco */
+  color: darkslategrey; /* Cor do texto */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 1); /* Sombra mais suave */
+  margin: 150px auto; /* Centraliza e dá espaço no topo */
+  overflow-y: auto; /* Permite rolagem se o conteúdo for grande */
 }
 
-
+/* Estilos dos elementos do formulário */
 h2 {
   text-align: center;
   color: #333;
@@ -48,7 +59,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
-  box-sizing: border-box; /* Garante que padding não ultrapasse a largura */
+  box-sizing: border-box;
 }
 
 input[type="date"] {
@@ -56,7 +67,7 @@ input[type="date"] {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* Verde */
   color: white;
   padding: 12px 20px;
   border: none;
@@ -67,10 +78,10 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Verde mais escuro ao passar o mouse */
 }
 
 textarea {
   height: 150px;
-  resize: vertical;
+  resize: vertical; /* Permite redimensionar verticalmente */
 }

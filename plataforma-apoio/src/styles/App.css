@@ -2,8 +2,6 @@
 /* Ajuste para o conteúdo principal */
 .main-content-app {
   min-height: 100vh; /* Mantém a altura mínima */
-  padding-top: 80px; /* Espaço para evitar sobreposição da Navbar */
-  padding-bottom: 80px; /* Espaço para evitar sobreposição do Footer */
   display: flex;
   justify-content: center;
   align-items: flex-start;

@@ -1,19 +1,20 @@
-  
   .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
     box-sizing: border-box;
-    padding: 20px;
     overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/5699466/pexels-photo-5699466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  
   .login-form {
     background-color: #fff;
     padding: 40px;
-    border-radius: 30px 0 30px 0; /* Arredondar apenas a superior direita e inferior esquerda */
+    border-radius: 30px 0 30px 0;
+    /* Arredondar apenas a superior direita e inferior esquerda */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 100%;
@@ -21,41 +22,43 @@
     box-sizing: border-box;
     position: relative;
   }
-  
+
   /* Logomarca agora com border-radius e sem sair para fora */
   .login-form h1 {
     color: #fff;
     font-size: 24px;
     background-color: #007bff;
     padding: 20px;
-    border-radius: 50%; /* Borda arredondada */
+    border-radius: 50%;
+    /* Borda arredondada */
     width: 100px;
     height: 100px;
-    margin: 0 auto 20px; /* Não afeta o layout de outros elementos */
+    margin: 0 auto 20px;
+    /* Não afeta o layout de outros elementos */
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
-  
+
   /* Aqui você pode substituir a imagem com a logomarca */
   .login-form h1 img {
     width: 80%;
     height: 80%;
     border-radius: 50%;
   }
-  
+
   .login-form .form-group {
     margin-bottom: 10px;
   }
-  
+
   .login-form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     text-align: left;
   }
-  
+
   .login-form input {
     width: 100%;
     padding: 10px;
@@ -64,7 +67,7 @@
     box-sizing: border-box;
     margin: 0;
   }
-  
+
   .login-form button {
     background-color: #007bff;
     color: #fff;
@@ -75,42 +78,30 @@
     transition: background-color 0.3s;
     width: 100%;
   }
-  
+
   .login-form button:hover {
     background-color: #0069d9;
   }
-  
+
   .login-form p {
     margin-top: 20px;
     color: #666;
   }
-  
+
   .login-form a {
     color: #007bff;
     text-decoration: none;
   }
-  
+
   .login-form a:hover {
     text-decoration: underline;
   }
-  
+
   .login-form .links {
     margin-top: 20px;
     text-align: center;
   }
-  
+
   .login-form .links a {
     margin: 0 10px;
   }
-  
-  .footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .footer p {
-    margin: 0;
-  }
-  

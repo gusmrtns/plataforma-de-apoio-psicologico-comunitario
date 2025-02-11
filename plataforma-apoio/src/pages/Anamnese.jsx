@@ -18,23 +18,24 @@ function Anamnese() {
 
     return (
         <>
-            <div className="anamnese-container">
-                <form id="divform-anam" onSubmit={handleSubmit}>
-                    <h1>Anamnese Básica</h1>
-                    <Pessoal/> 
-                    <Inform/>
-                    <Historico/>
-                    <div className="divBotao">
-                        <button className="botao-anamnese" type="submit">Finalizar Anamnese</button>
-                    </div>
-                </form>
+            <div className="anamnese-background"></div> {/* Aqui está a classe do fundo */}
+        <div className="anamnese-container">
+            <form id="divform-anam" onSubmit={handleSubmit}>
+                <h1>Anamnese Básica</h1>
+                <Pessoal/>
+                <Inform/>
+                <Historico/>
                 <div className="divBotao">
-                    <Link to="/">
-                        <button className="botao-anamnese">Página Inicial</button>
-                    </Link>
+                    <button className="botao-anamnese" type="submit">Finalizar Anamnese</button>
                 </div>
+            </form>
+            <div className="divBotao">
+                <Link to="/">
+                    <button className="botao-anamnese">Página Inicial</button>
+                </Link>
             </div>
-        </>
+        </div>
+    </>
     )
 }
 
