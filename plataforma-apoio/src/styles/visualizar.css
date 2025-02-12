@@ -4,14 +4,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .divisor {
    display: flex;
    flex-direction: column;
    gap: 10px;
+   transform: scale(0.9); /* Reduz a escala para 80% */
 }
+
 .visu {
     padding: 60px;
     display: flex;
@@ -24,6 +25,7 @@
     border-radius: 22px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);  /*Sombra preta com 30% de opacidade */
 }
+
 .imagem_do_perfil {
     justify-content: center;
     display: flex;
@@ -33,6 +35,7 @@
     border-radius: 50%;
     background-color: #5D87D2;
 }
+
 .nume {
     display: flex;
     justify-content: center;
@@ -43,20 +46,6 @@
     background-color: #5D87D2;
 }
 
-.retornar { /* Posiciona o item de forma absoluta dentro do contêiner pai */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    height: 30px;
-    width: auto;
-    background-color: #E2AB77;
-    border-radius: 12px;
-    white-space: nowrap;
-    border: none;
-    cursor: pointer;
-}
 
 .retornar:hover {
     background-color: #C68C56; /* Azul escuro */
@@ -75,7 +64,6 @@
     flex-direction: column;
     height: 800px;
     width: 1413px;
-    
     align-items: center;
     background-color: #F4D9BD;
     border-radius: 22px;
@@ -120,8 +108,9 @@
     gap: 1000px;
     white-space: nowrap;
 }
+
 .baixo { 
     display: flex;
-    gap: 800px;
+    gap: 1100px;
     white-space: nowrap;
 }
