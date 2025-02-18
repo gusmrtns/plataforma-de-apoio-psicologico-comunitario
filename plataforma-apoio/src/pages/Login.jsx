@@ -4,7 +4,6 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h1>logomarca</h1>
         <form>
           <div className="form-group">
             <label htmlFor="email">Usuário/e-mail:</label>

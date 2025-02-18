@@ -133,11 +133,6 @@ const CadastroProfissional = () => {
             <button className="botao-cadastro" type="submit">Finalizar Cadastro</button>
           </div>
         </form>
-        <div className="divBotao">
-          <Link to="/">
-            <button className="botao-cadastro">Página Inicial</button>
-          </Link>
-        </div>
       </div>
     </>
   );
