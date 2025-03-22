@@ -21,9 +21,8 @@ const Visualizar = () => {
 
                 <div className="baixo"> 
                     <h1> Fortaleza, Ceará, Brasil</h1>
-                    <button className="retornar"><h1>Página inicial</h1></button>
+                    <h1></h1>
                 </div>
-                
             </div>
             
         </section>
@@ -56,8 +55,6 @@ const Visualizar = () => {
                    
                     <div className="cap"><h1>10 anos</h1></div>
                 </div>
-                    
-    
             </div>
         </section>
     </div>
