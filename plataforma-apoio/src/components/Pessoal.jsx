@@ -7,18 +7,12 @@ function Pessoal() {
     const [cpf, setCpf] = useState("");
     const [rg, setRg] = useState("");
     const [celular, setCelular] = useState("");
-    const [nacao, setNacao] = useState("");
     const [nomeResp1, setResp1] = useState("");
-    const [nomeResp2, setResp2] = useState("");
     const [nascimento, setNascimento] = useState("");
     const [genero, setGenero] = useState("");
     const [orienSex, setOrienSex] = useState("");
     const [escolaridade, setEscolaridade] = useState("");
     const [estCivil, setEstCivil] = useState("");
-    const [filhos, setFilhos] = useState("");
-    const [ocupacao, setOcupacao] = useState("");
-    const [moradia, setMoradia] = useState("");
-    const [conv, setConv] = useState("");
 
     return (
         <>
@@ -61,22 +55,12 @@ function Pessoal() {
                         onInput={(e) => e.target.setCustomValidity("")}>
                             {(inputProps) => <input {...inputProps} id="celular" type="text" placeholder="Celular" required />}
                         </InputMask>
-                        <input 
-                        type="text" id="nacao"
-                        placeholder="Nacionalidade"
-                        onChange={(e) => setNacao(e.target.value)}/>
                     </div>
                     <div className="inputs">
                         <input 
                         type="text" id="nomeResp1"
                         placeholder="Nome completo do Responsavél(opcional)"
                         onChange={(e) => setResp1(e.target.value)}/>
-                    </div>
-                    <div className="inputs">
-                        <input 
-                        type="text" id="nomeResp2"
-                        placeholder="Nome completo do Responsavél(opcional)"
-                        onChange={(e) => setResp2(e.target.value)}/>
                     </div>
                     <div className="inputs">
                         <input 
@@ -130,34 +114,6 @@ function Pessoal() {
                             <option value="separ">Separado(a) Judicialmente</option>
                             <option value="prefN">Prefiro Não Informar</option>
                         </select>
-                        <label htmlFor="filhos">Filhos*: </label>
-                        <select id="filhos" value={filhos}
-                        onChange={(e) => setFilhos(e.target.value)}
-                        required
-                        onInvalid={(e) => e.target.setCustomValidity("Por favor, selecione uma opção.")}
-                        onInput={(e) => e.target.setCustomValidity("")}>
-                            <option value="" disabled>Quantidade de Filhos</option>
-                            <option value="0">Não tenho</option>
-                            <option value="1">1 filho(a)</option>
-                            <option value="2">2 filhos(as)</option>
-                            <option value="3">3 filhos(as)</option>
-                            <option value="4">4 filhos(as)</option>
-                            <option value="4+">Mais de 4 filhos(as)</option>
-                        </select>
-                    </div>
-                    <div className="inputs-maior">
-                        <label htmlFor="ocupacao">Ocupação Atual: </label>
-                        <textarea 
-                        value={ocupacao} id="ocupacao" className="input-maior"
-                        onChange={(e) => setOcupacao(e.target.value)}/> <br />
-                        <label htmlFor="moradia">Com quem você reside atualmente?</label> <br />
-                        <textarea 
-                        value={moradia} id="moradia" className="input-maior"
-                        onChange={(e) => setMoradia(e.target.value)}/> <br />
-                        <label htmlFor="conv">Como tem sido a convivência?</label> <br />
-                        <textarea 
-                        value={conv} id="conv" className="input-maior"
-                        onChange={(e) => setConv(e.target.value)}/>
                     </div>
                 </section>
             </div>

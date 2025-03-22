@@ -1,24 +1,16 @@
 import React, {useState} from "react";
-import '../styles/CompAnam.css'
 
-function Inform() {
+function Endereco() {
     const [uf, setUf] = useState("");
     const [cidade, setCidade] = useState("");
     const [bairro, setBairro] = useState("");
     const [rua, setRua] = useState("");
     const [numero, setNumero] = useState("");
 
-    const [motivo, setMotivo] = useState("");
-    const [percep, setPercep] = useState("");
-    const [evoluc, setEvoluc] = useState("");
-    const [resolv, setResolv] = useState("");
-    const [afetVida, setAfetVida] = useState("");
-    const [histFami, setHistFami] = useState("");
-
-    return (
+    return(
         <>
-            <div id="informs">
-                <section>
+            <div id="Endereco">
+            <section>
                     <h2>Endereço</h2>
                     <div className="inputs-endereco">
                         <label htmlFor="uf">UF:</label>
@@ -68,43 +60,9 @@ function Inform() {
                         onChange={(e) => setNumero(e.target.value)}/>
                     </div>
                 </section>
-                <section>
-                    <h2>Atendimento</h2>
-                    <label htmlFor="motivo">Qual o principal motivo que o trouxe a terapia*?</label> <br/>
-                    <textarea value={motivo} id="motivo" className="input-maior"
-                    onChange={(e) => setMotivo(e.target.value)}
-                    required
-                    onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha o campo para prosseguir.")}
-                    onInput={(e) => e.target.setCustomValidity("")}/> <br/>
-                    <label htmlFor="percep">Como você percebe o problema e suas consequências na sua vida*?</label> <br/>
-                    <textarea value = {percep} id="percep" className="input-maior"
-                    onChange={(e) => setPercep(e.target.value)}
-                    required
-                    onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha o campo para prosseguir.")}
-                    onInput={(e) => e.target.setCustomValidity("")}/> <br/>
-                    <label htmlFor="evoluc">Quando o problema começou e como evoluiu*?</label> <br/>
-                    <textarea value = {evoluc} id="evoluc" className="input-maior"
-                    onChange={(e) => setEvoluc(e.target.value)}
-                    required
-                    onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha o campo para prosseguir.")}
-                    onInput={(e) => e.target.setCustomValidity("")}/> <br/>
-                    <label htmlFor="resolv">Você tentou resolver o problema antes*?</label> <br/>
-                    <textarea value = {resolv} id="resolv" className="input-maior"
-                    placeholder="Se sim, como?"
-                    onChange={(e) => setResolv(e.target.value)} 
-                    required
-                    onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha o campo para prosseguir.")}
-                    onInput={(e) => e.target.setCustomValidity("")}/> <br/>
-                    <label htmlFor="afetVida">De que forma esse problema tem afetado sua vida?</label> <br/>
-                    <textarea value = {afetVida} id="afetVida" className="input-maior"
-                    onChange={(e) => setAfetVida(e.target.value)} /> <br/>
-                    <label htmlFor="histFami">Há histórico de transtornos psicológicos na família?</label> <br/>
-                    <textarea value = {histFami} id="histFami" className="input-maior"
-                    onChange={(e) => setHistFami(e.target.value)} /> <br/> 
-                </section>
             </div>
         </>
     )
 }
 
-export default Inform;
+export default Endereco;

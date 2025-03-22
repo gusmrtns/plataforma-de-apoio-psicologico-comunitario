@@ -1,18 +1,13 @@
 import React, {useState} from "react";
-import Pessoal from "../components/Pessoal";
-import Inform from "../components/Inform";
 import Historico from "../components/Historico";
 import { Link, useNavigate } from "react-router-dom"
 import '../styles/Anamnese.css'
 
-function Anamnese() {
-    const [cpf, setCpf] = useState("");
-    const [rg, setRg] = useState("");
-    const [celular, setCelular] = useState("");
+function EvolucaoClinica() {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        alert("Anamnese realizada com sucesso!");
+        alert("Evolução Clínica realizada com sucesso!");
         navigate("/usuario");
     };
 
@@ -21,12 +16,10 @@ function Anamnese() {
             <div className="anamnese-background"></div> {/* Aqui está a classe do fundo */}
         <div className="anamnese-container">
             <form id="divform-anam" onSubmit={handleSubmit}>
-                <h1>Anamnese Básica</h1>
-                <Pessoal/>
-                <Inform/>
+                <h1>Evolução Clínica</h1>
                 <Historico/>
                 <div className="divBotao">
-                    <button className="botao-anamnese" type="submit">Finalizar Anamnese</button>
+                    <button className="botao-anamnese" type="submit">Finalizar Evolução Clínica</button>
                 </div>
             </form>
             <div className="divBotao">
@@ -39,4 +32,4 @@ function Anamnese() {
     )
 }
 
-export default Anamnese;
+export default EvolucaoClinica;
