@@ -83,5 +83,5 @@ button:hover {
 
 textarea {
   height: 150px;
-  resize: vertical; /* Permite redimensionar verticalmente */
+  resize: vertical;
 }

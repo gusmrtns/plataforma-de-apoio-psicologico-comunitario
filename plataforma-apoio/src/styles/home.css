@@ -13,6 +13,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh; /* Garante que ocupa toda a tela */
+    height: 100vh;
 }
 
 .header-home img{
