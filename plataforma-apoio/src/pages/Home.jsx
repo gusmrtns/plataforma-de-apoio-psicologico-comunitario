@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <div className="home-wrapper">
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
+
       <div className="container-home">
         <div className="header-home">
           <img src="./src/assets/homeheader.jpg" alt="imagem header" />
@@ -30,6 +31,31 @@ const Home = () => {
           <div className="about">
             <i class='bx bxs-face'></i>
             <h2>Variedade <br></br>de profissionais</h2>
+          </div>
+        </section>
+        <section className="coments-container">
+          <div className="coments">
+            <div className="coments-info">
+              <img src="./src/assets/anonimo.jpg" alt="imagem de perfil" />
+              <h1>"É normal sentir-se perdido(a) em certos momentos da vida. Mas lembre-se, buscar apoio psicológico<br></br>é um passo corajoso e fundamental para o seu bem-estar. Não hesite em procurar ajuda."</h1>
+            </div>
+            <div className="coments-info">
+              <img src="./src/assets/anonimo.jpg" alt="imagem de perfil" />
+              <h1>"Se você se sente sobrecarregado(a), não está sozinho(a). Aqui, você encontrará apoio, compreensão e ferramentas para enfrentar os desafios da vida de maneira mais saudável."</h1>
+            </div>
+            <div className="coments-info">
+              <img src="./src/assets/anonimo.jpg" alt="imagem de perfil" />
+              <h1>"Procurar apoio foi uma das melhores decisões que tomei. Com o apoio psicológico, aprendi a cuidar de minha saúde mental e a dar passos importantes para meu bem-estar emocional."</h1>
+            </div>
+            <div className="coments-input">
+              <h2> Faça seu depoimento:</h2>
+              <form>
+                <label for="depoimento">Seu depoimento:</label>
+                <textarea id="depoimento" name="comentario" rows="4" cols="60"></textarea>
+                <button type="submit">Enviar</button>
+              </form>
+
+            </div>
           </div>
         </section>
       </div>

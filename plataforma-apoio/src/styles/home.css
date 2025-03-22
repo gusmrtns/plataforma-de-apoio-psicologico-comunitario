@@ -1,22 +1,23 @@
-
 .container-home {
-    width: 100vw;  /* Ocupa toda a largura da tela */
-    min-height: 100vh;  /* Garante que o conteúdo ocupe toda a tela */
+    width: 100vw;
+    /* Ocupa toda a largura da tela */
+    min-height: 100vh;
+    /* Garante que o conteúdo ocupe toda a tela */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 80px; /* Espaço para evitar sobreposição do footer */
+    padding-bottom: 80px;
+    /* Espaço para evitar sobreposição do footer */
 }
 
 .header-home {
     position: relative;
     width: 100%;
     min-height: 100vh; /* Garante que ocupa toda a tela */
-    height: 100vh;
 }
 
-.header-home img{
+.header-home img {
     width: 100%;
     height: 800px;
     object-fit: cover;
@@ -26,21 +27,23 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 530px; 
+    width: 530px;
     height: 400px;
     display: flex;
     margin-left: 5em;
     margin-top: 10em;
     border-radius: 60px 0 60px 0;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     background-color: rgba(22, 73, 165, 0.8);
-    color: white; 
+    color: white;
     padding: 20px;
 }
 
-.header-text h1, h2, p {
+.header-text h1,
+h2,
+p {
     font-size: 1em;
     margin-bottom: 1em;
     font-family: "Instrument Sans", serif;
@@ -48,29 +51,34 @@
     font-weight: 500;
     font-style: normal;
     font-variation-settings:
-      "wdth" 100;
+        "wdth" 100;
 }
-.header-text h1{
+
+.header-text h1 {
     font-size: 2.5em;
     color: #B9E1D9;
 }
-.header-text h2{
+
+.header-text h2 {
     background-color: #D88656;
     padding: 0.2em 1em;
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0,9);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     color: black;
 }
-.header-text p{
+
+.header-text p {
     font-size: 1.3em;
- }
-.aboutus{
+}
+
+.aboutus {
     margin-top: 8em;
     display: flex;
     justify-content: space-evenly;
     gap: 4em;
 }
-.about{
+
+.about {
     background-color: #D88656;
     border-radius: 100%;
     width: 300px;
@@ -80,13 +88,101 @@
     justify-content: center;
     flex-direction: column;
 
-    & h2{
+    & h2 {
         font-size: 1.5em;
         color: black;
     }
 
-    & .bx-health, .bxs-wallet, .bxs-calendar, .bxs-face{
+    & .bx-health,
+    .bxs-wallet,
+    .bxs-calendar,
+    .bxs-face {
         color: black;
-        font-size:3em;
+        font-size: 3em;
     }
+}
+
+.coments-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(22, 73, 165);
+    width: 100%;
+    height: 1200px;
+    margin-top: 8em;
+}
+
+.coments-info {
+    padding-top: 2em;
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 2em;
+    width: 85em;
+    height: 12em;
+    display: flex;
+    flex-direction: row;
+    border-radius: 110px;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+
+
+    & img {
+        width: 11em;
+        height: 11em;
+        margin-left: 2em;
+        margin-bottom: 1.6em;
+        margin-right: 2em;
+        border-radius: 100%;
+
+    }
+
+    & h1 {
+        color: #D88656;
+        opacity: 80%;
+        font-size: 1.3em;
+        font-family: "Instrument Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+
+}
+
+.coments-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+    background: rgba(0, 0, 0, 0.4);
+    width: 85em;
+    height: 17em;
+    border-radius: 30px;
+
+    & h2 {
+        color: #B9E1D9;
+    }
+    & form{
+        display: flex;
+        flex-direction: column;
+
+        & label{
+            color: #D88656;
+            font-size: 1.3em;
+            
+        }
+        & textarea{
+            height: 4em;
+        }
+        & button{
+            width: 4.7em;
+            border-radius: 2em;
+            background-color:#D88656;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.3em;
+        }
+    }
+
 }
