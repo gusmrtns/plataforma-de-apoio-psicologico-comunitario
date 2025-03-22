@@ -12,6 +12,7 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><Link to="/">Início</Link></li>
           <li><Link to="/buscar">Buscar Profissionais</Link></li>
+          <Link to="/ajuda" className="btn-ajuda">Procurar Ajuda Agora</Link>
           <li><Link to="/cadastroPaciente">Cadastro de Paciente</Link></li>
           <li><Link to="/login">Login</Link></li>
           <li><Link to="/cadastroProfissional">Cadastro Profissional</Link></li>
