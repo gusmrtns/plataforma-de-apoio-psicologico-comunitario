@@ -2,11 +2,9 @@ import React, {useState} from "react";
 import '../styles/CompAnam.css'
 
 function Historico() {
+    const [histFami, setHistFami] = useState("");
     const [probl, setProbl] = useState("");
     const [medic, setMedic] = useState("");
-    const [subst, setSubst] = useState("");
-
-    const [emoc, setEmoc] = useState("");
     const [qualSono, setQualSono] = useState("");
     const [apetite, setApetite] = useState("");
     const [pensNeg, setPensNeg] = useState("");
@@ -15,8 +13,11 @@ function Historico() {
        <>
             <div id="historico">
                 <section>
-                    <h2>Histórico de Saúde Física</h2>
-                    <label htmlFor="probl">Você tem ou já teve problemas de saúde física*?</label> <br />
+                    <h2>Histórico de Saúde</h2>
+                    <label htmlFor="histFami">Há histórico de transtornos psicológicos na família?</label> <br/>
+                    <textarea value = {histFami} id="histFami" className="input-maior"
+                    onChange={(e) => setHistFami(e.target.value)} /> <br/> 
+                    <label htmlFor="probl">Você tem ou já teve problemas de saúde*?</label> <br />
                     <textarea value={probl} id="probl" className="input-maior"
                     onChange={ (e) => setProbl(e.target.value)}
                     placeholder="Se sim, quais?"
@@ -30,17 +31,6 @@ function Historico() {
                     required
                     onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha o campo para prosseguir.")}
                     onInput={(e) => e.target.setCustomValidity("")}/> <br />
-                    <label htmlFor="subst">Faz uso de alguma substância?</label> <br />
-                    <textarea value={subst} id="subst" className="input-maior"
-                    onChange={(e) => setSubst(e.target.value)}
-                    placeholder="Ex: Álcool, Drogas, Tabaco"/>
-                </section>
-                <section>
-                    <h2>Estado Emocional e Funcional</h2>
-                    <label htmlFor="emoc">Quais emoções têm predominado ultimamente?</label> <br />
-                    <textarea value={emoc} id="emoc" className="input-maior"
-                    onChange={(e) => setEmoc(e.target.value)}
-                    placeholder="Ex: Tristeza, Ansiedade, Raiva"/> <br />
                     <label htmlFor="qualSono">Como está sua qualidade de sono?</label> <br />
                     <textarea value={qualSono} id="qualSono" className="input-maior" 
                     onChange={(e) => setQualSono(e.target.value)}
