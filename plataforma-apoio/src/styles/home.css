@@ -7,13 +7,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 80px;
+   
 }
 
 .header-home {
     position: relative;
     width: 100%;
-    min-height: 100vh; /* Garante que ocupa toda a tela */
+    min-height: 100vh;
+    /* Garante que ocupa toda a tela */
 }
 
 .header-home img {
@@ -162,26 +163,119 @@ p {
     & h2 {
         color: #B9E1D9;
     }
-    & form{
+
+    & form {
         display: flex;
         flex-direction: column;
 
-        & label{
+        & label {
             color: #D88656;
             font-size: 1.3em;
-            
+            font-family: "Instrument Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+
         }
-        & textarea{
+
+        & textarea {
             height: 4em;
         }
-        & button{
+
+        & button {
             width: 4.7em;
             border-radius: 2em;
-            background-color:#D88656;
+            background-color: #D88656;
             margin-left: auto;
             margin-right: auto;
+            color: black;
             font-size: 1.3em;
+            font-family: "Instrument Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
     }
 
+}
+
+.container-ajuda {
+    width: 100%;
+    display: flex;
+
+
+
+    & .ajuda-img {
+        width: 50%;
+        height: 100vh;
+
+        & img {
+            height: 100vh;
+
+
+        }
+    }
+
+    & .ajuda-link {
+        background-color:white;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & div {
+            background-color: rgb(22, 73, 165);
+            padding: 3em;
+            border-radius: 30px;
+            color: white;
+
+            & h1 {
+                font-family: "Instrument Sans", serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-variation-settings:
+                    "wdth" 100;
+            }
+        }
+    }
+}
+
+.ajuda-id {
+    background-color: #D88656;
+    /* Laranja da paleta */
+    color: black;
+    padding: 1em 1.5em;
+    border-radius: 15px;
+
+
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-family: "Instrument Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bx-search {
+    margin-left: 0.5em;
+    font-size: 1em;
+}
+
+.ajuda-id:hover {
+    background-color: #D9B9A0;
+    /* Bege-claro */
 }

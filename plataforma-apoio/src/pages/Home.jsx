@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/home.css";
 
 
@@ -54,10 +55,20 @@ const Home = () => {
                 <textarea id="depoimento" name="comentario" rows="4" cols="60"></textarea>
                 <button type="submit">Enviar</button>
               </form>
-
             </div>
           </div>
         </section>
+        <div className="container-ajuda">
+          <div className="ajuda-img">
+            <img src="./src/assets/ajuda.jpeg" alt="" />
+          </div>
+          <div className="ajuda-link">
+            <div>
+            <h1>Clique se estiver buscando ajuda</h1>
+            <Link to="/ajuda" className="ajuda-id">Procurar Ajuda <i class='bx bx-search'></i></Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
