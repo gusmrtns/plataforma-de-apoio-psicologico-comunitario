@@ -85,7 +85,7 @@
   .btn-ajuda {
     background-color: #D88656; /* Laranja da paleta */
     color: white;
-    padding: 0.5em 0.8em;
+    padding: 0.2em 0.5em;
     border-radius: 5px;
 
     font-weight: bold;
@@ -109,7 +109,7 @@
   .btn-login {
     background-color: #D88656; /* Laranja da paleta */
     color: white;
-    padding: 0.5em 0.8em;
+    padding: 0.2em 0.8em;
     border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
@@ -131,7 +131,7 @@
     text-decoration: none;
     background-color: #5D87D2; /* Laranja da paleta */
     color: white;
-    padding: 0.5em 0.2em;
+    padding: 0.2em 0.2em;
     
     font-weight: bold;
     text-decoration: none;
