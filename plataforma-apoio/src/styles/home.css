@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 80px;
+    padding-bottom: 4px;
 }
 
 .header-home {
@@ -118,14 +118,14 @@ p {
     color: #D88656;
     font-size: 1.8em;
     margin-right: 16em;
-    
-    & h1{
+
+    & h1 {
         font-family: "Instrument Sans", serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-            font-variation-settings:
-                "wdth" 100;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
     }
 
 }
@@ -194,11 +194,11 @@ p {
         color: #B9E1D9;
         font-size: 1.8em;
         font-family: "Instrument Sans", serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-            font-variation-settings:
-                "wdth" 100;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
     }
 
     & form {
@@ -329,4 +329,140 @@ p {
 .ajuda-id:hover {
     background-color: #D9B9A0;
     /* Bege-claro */
+}
+
+
+@media (max-width: 400px) {
+    .header-home img {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .header-text {
+        width: 200px;
+        height: 250px;
+        margin-left: 2em;
+    }
+
+    .header-text h1 {
+        font-size: 1.2em;
+        color: #B9E1D9;
+    }
+
+    .header-text h2 {
+        font-size: 0.8em;
+    }
+
+    .header-text p {
+        font-size: 0.6em;
+    }
+
+
+    .aboutus {
+        flex-direction: column;
+    }
+
+    .about {
+        width: 180px;
+        height: 180px;
+        margin-right: 4.5em;
+
+        & h2 {
+            font-size: 1.1em;
+            color: black;
+        }
+
+        & .bx-health,
+        .bxs-wallet,
+        .bxs-calendar,
+        .bxs-face {
+            color: black;
+            font-size: 2em;
+        }
+    }
+
+
+    .title-coments {
+        color: #D88656;
+        font-size: 0.8em;
+        width: 20em;
+        margin-left: 12em;
+    }
+
+    .coments {
+        border-radius: 3em 8em 3em 3em;
+        padding-top: 0;
+        width: 16em;
+        margin-right: 4em;
+    }
+
+    .coments-info {
+        padding-top: 0;
+        width: 13em;
+        height: 7em;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        & img {
+            width: 3em;
+            height: 3em;
+            margin-right: auto;
+            margin-bottom: 0.5em;
+
+        }
+
+        & h1 {
+            font-size: 0.7em;
+            margin-bottom: 5em;
+        }
+    }
+
+    .coments-input { 
+        width: 16em;
+        height: 20em;
+        border-radius: 3em 3em 8em 3em;
+        margin-right: 6em;
+
+        & h2 {
+            color: #B9E1D9;
+            font-size: 1.1em;
+            margin-top: 5em;
+        }
+
+        & form {
+            & label {
+                color: #D88656;
+                font-size: 0em;
+            }
+
+            & textarea {
+                width: 15em;
+                height: 2em;
+            }
+
+            & button {
+                width: 4.7em;
+                border-radius: 2em;
+                background-color: #D88656;
+                margin-left: auto;
+                margin-right: auto;
+                color: black;
+                font-size: 1.3em;
+                font-family: "Instrument Sans", serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-variation-settings:
+                    "wdth" 100;
+
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+    
 }
