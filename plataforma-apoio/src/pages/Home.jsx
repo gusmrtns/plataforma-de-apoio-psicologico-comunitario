@@ -35,6 +35,11 @@ const Home = () => {
           </div>
         </section>
         <section className="coments-container">
+
+          <div className="title-coments">
+            <h1>Veja o <strong>depoimento</strong> de nossos usuários</h1>
+          </div>
+
           <div className="coments">
             <div className="coments-info">
               <img src="./src/assets/anonimo.jpg" alt="imagem de perfil" />
@@ -48,14 +53,14 @@ const Home = () => {
               <img src="./src/assets/anonimo.jpg" alt="imagem de perfil" />
               <h1>"Procurar apoio foi uma das melhores decisões que tomei. Com o apoio psicológico, aprendi a cuidar de minha saúde mental e a dar passos importantes para meu bem-estar emocional."</h1>
             </div>
-            <div className="coments-input">
-              <h2> Faça seu depoimento:</h2>
-              <form>
-                <label for="depoimento">Seu depoimento:</label>
-                <textarea id="depoimento" name="comentario" rows="4" cols="60"></textarea>
-                <button type="submit">Enviar</button>
-              </form>
-            </div>
+          </div>
+          <div className="coments-input">
+            <h2> Faça seu <strong>depoimento</strong>:</h2>
+            <form>
+              <label for="depoimento">Seu depoimento:</label>
+              <textarea id="depoimento" name="comentario" rows="4" cols="60"></textarea>
+              <button type="submit">Enviar</button>
+            </form>
           </div>
         </section>
         <div className="container-ajuda">
@@ -64,8 +69,8 @@ const Home = () => {
           </div>
           <div className="ajuda-link">
             <div>
-            <h1>Clique se estiver buscando ajuda</h1>
-            <Link to="/ajuda" className="ajuda-id">Procurar Ajuda <i class='bx bx-search'></i></Link>
+              <h1>Clique se estiver buscando ajuda</h1>
+              <Link to="/ajuda" className="ajuda-id">Procurar Ajuda <i class='bx bx-search'></i></Link>
             </div>
           </div>
         </div>

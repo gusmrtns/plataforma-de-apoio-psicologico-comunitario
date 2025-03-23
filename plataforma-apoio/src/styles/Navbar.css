@@ -130,12 +130,11 @@
     color: white;
     text-decoration: none;
     background-color: #5D87D2; /* Laranja da paleta */
-    color: white;
     padding: 0.2em 0.2em;
     
     font-weight: bold;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
     font-family: "Instrument Sans", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -143,7 +142,9 @@
     font-variation-settings:
       "wdth" 100;
   }
-
+  .signup:hover{
+    color: #B9E1D9;
+  }
 @media (max-width: 768px) {
   .nav-links {
       gap: 15px;
