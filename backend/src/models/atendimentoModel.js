@@ -1,8 +1,16 @@
 const {PrismaClient} = require('@prisma/client');
 const prisma = new PrismaClient();
 
-const listarAtendimentos = async () => {
-    return prisma.atendimento.findMany();
+// const listarAtendimentos = async () => {
+//     return prisma.atendimento.findMany();
+// };
+
+const listarAtendimentosPorPaciente = async (pacienteId) => {
+    return prisma.atendimento.findMany({ where: { pacienteId } });
+};
+
+const listarAtendimentosPorProfissional = async (profissionalId) => {
+    return prisma.atendimento.findMany({ where: { profissionalId } });
 };
 
 const buscarAtendimentoPorId = async (id) => {
@@ -45,8 +53,7 @@ const adicionarAtendimento = async ({dataHoraAtend, statusAtend, avaliacaoAtend,
     });
 };
 
-const atualizarAtendimento = async (id, {dataHoraAtend, statusAtend, avaliacaoAtend, pacienteId, profissionalId}) => {
-    //VERIFICAR SE DEVERIA TER VALIDACAO DE CHAVES ESTRANGEIRAS
+const atualizarAtendimento = async (id, {dataHoraAtend, statusAtend, avaliacaoAtend}) => {
     const atendimento = await prisma.atendimento.findUnique({
         where: {id},
     });
@@ -61,8 +68,6 @@ const atualizarAtendimento = async (id, {dataHoraAtend, statusAtend, avaliacaoAt
             dataHoraAtend: new Date(dataHoraAtend),
             statusAtend,
             avaliacaoAtend,
-            pacienteId,
-            profissionalId,
         },
     });
 };
@@ -81,7 +86,8 @@ const excluirAtendimento = async (id) => {
 };
 
 module.exports = {
-    listarAtendimentos,
+    listarAtendimentosPorPaciente,
+    listarAtendimentosPorProfissional,
     buscarAtendimentoPorId,
     adicionarAtendimento,
     atualizarAtendimento,

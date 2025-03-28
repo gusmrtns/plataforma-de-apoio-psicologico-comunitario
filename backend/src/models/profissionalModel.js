@@ -7,7 +7,15 @@ const listarProfissionais = async () => {
 
 const buscarProfissionalPorId = async (id) => {
     const profissional = await prisma.profissional.findUnique({
-        where: {id}
+        where: {id},
+        select: {
+            nomeProf: true, 
+            celularProf: true,
+            abordagemProf: true,
+            formacaoProf: true,
+            matriculaProf: true,
+            localizacaoProf: true,
+          },
     });
 
     if (!profissional) {
@@ -42,7 +50,6 @@ const adicionarProfissional = async ({ nomeProf, cpfProf, rgProf, celularProf, a
 };
 
 const atualizarProfissional = async (id, { nomeProf, cpfProf, rgProf, celularProf, abordagemProf, formacaoProf, matriculaProf, localizacaoProf, usuarioId }) => {
-    //VERIFICAR SE NÃO PRECISA DE VALIDAÇÃO DE CHAVE ESTRANGEIRA
     const profissional = await prisma.profissional.findUnique({
         where: {id},
     });

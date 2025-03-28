@@ -2,30 +2,32 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const listarPacientes = async () => {
-  return prisma.paciente.findMany({
-    include: {
-      usuario: true, // Inclui as informações do usuário associado
-      endereco: true, // Inclui as informações do endereço associado
-    },
-  });
+    return prisma.paciente.findMany({
+        select: {
+            nomePac: true,
+            celularPac: true,
+            nomeRespPac: true,
+            fotoPac: true,
+        },
+    });
 };
 
 const buscarPacientePorId = async (id) => {
-  const paciente = await prisma.paciente.findUnique({
-    where: { id },
-    include: {
-      usuario: true,
-      endereco: true,
-      evolucoesClinica: true,
-      atendimentos: true,
-    },
-  });
+    const paciente = await prisma.paciente.findUnique({
+        where: { id },
+        select: {
+            nomePac: true,
+            celularPac: true,
+            nomeRespPac: true,
+            fotoPac: true,
+        },
+    });
 
-  if (!paciente) {
-    throw new Error('Paciente não encontrado');
-  }
+    if (!paciente) {
+        throw new Error('Paciente não encontrado');
+    }
 
-  return paciente;
+    return paciente;
 };
 
 const adicionarPaciente = async ({
@@ -68,30 +70,7 @@ const adicionarPaciente = async ({
   });
 };
 
-const atualizarPaciente = async (id, {
-  nomePac,
-  cpfPac,
-  rgPac,
-  celularPac,
-  nomeRespPac,
-  generoPac,
-  orienSexPac,
-  dataNascPac,
-  escolaridadePac,
-  estCivilPac,
-  fotoPac,
-}) => {
-  const paciente = await prisma.paciente.findUnique({
-    where: { id },
-  });
-
-  if (!paciente) {
-    throw new Error('Paciente não encontrado!');
-  }
-
-  return await prisma.paciente.update({
-    where: { id },
-    data: {
+const atualizarPaciente = async (id,usuarioId,{
       nomePac,
       cpfPac,
       rgPac,
@@ -103,22 +82,50 @@ const atualizarPaciente = async (id, {
       escolaridadePac,
       estCivilPac,
       fotoPac,
-    },
-  });
-};
+    }
+  ) => {
+    const paciente = await prisma.paciente.findUnique({
+      where: { id },
+    });
+  
+    if (!paciente) {
+      throw new Error('Paciente não encontrado!');
+    }
+  
+    return await prisma.paciente.update({
+      where: { id },
+      data: {
+        nomePac,
+        cpfPac,
+        rgPac,
+        celularPac,
+        nomeRespPac,
+        generoPac,
+        orienSexPac,
+        dataNascPac,
+        escolaridadePac,
+        estCivilPac,
+        fotoPac,
+      },
+    });
+  };
 
-const excluirPaciente = async (id) => {
-  const paciente = await prisma.paciente.findUnique({
-    where: { id },
-  });
+  const excluirPaciente = async (id) => {
+    const paciente = await prisma.paciente.findUnique({ where: { id } });
 
-  if (!paciente) {
-    throw new Error('Paciente não encontrado');
-  }
+    if (!paciente) throw new Error('Paciente não encontrado');
 
-  await prisma.paciente.delete({
-    where: { id },
-  });
+    await prisma.atendimento.updateMany({
+        where: { pacienteId: id },
+        data: { pacienteId: null },
+    });
+
+    await prisma.consulta.updateMany({
+        where: { pacienteId: id },
+        data: { pacienteId: null },
+    });
+
+    await prisma.paciente.delete({ where: { id } });
 };
 
 module.exports = {
