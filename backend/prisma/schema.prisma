@@ -1,0 +1,189 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TipoUsuario {
+  Paciente
+  Profissional
+}
+
+model Usuario {
+  id Int @id @default(autoincrement())
+  emailUsuar String @unique
+  senhaUsuar String
+  tipoUsuar TipoUsuario
+  paciente Paciente? @relation
+  profissional Profissional? @relation
+}
+
+enum EscolaridadePac {
+  FUNDAMENTAL_INCOMPLETO @map("Fundamental Incompleto")
+  FUNDAMENTAL_COMPLETO @map("Fundamental Completo")
+  MEDIO_INCOMPLETO @map("Médio Incompleto")
+  MEDIO_COMPLETO @map("Médio Completo")
+  SUPERIOR_INCOMPLETO @map("Superior Incompleto")
+  SUPERIOR_COMPLETO @map("Superior Completo")
+  POS_GRADUACAO_INCOMPLETO @map("Pós-Graduação Incompleto")
+  POS_GRADUACAO_COMPLETO @map("Pós-Graduação Completo")
+}
+
+enum EstCivPac {
+  SOLTEIRO @map("Solteiro(a)")
+  CASADO @map("Casado(a)")
+  UNIAO_ESTAVEL @map("União Estavél")
+  DIVORCIADO @map("Divorciado(a)")
+  VIUVO @map("Viúvo(a)")
+  SEPARADO_JUDICIALMENTE @map("Separado(a) Judicialmente")
+  PREFIRO_NAO_INFORMAR @map("Prefiro Não Informar")
+}
+
+model Paciente {
+  id Int @id @default(autoincrement())
+  nomePac String
+  cpfPac String
+  rgPac String
+  celularPac String
+  nomeRespPac  String
+  generoPac String
+  orienSexPac String
+  dataNascPac DateTime
+  escolaridadePac EscolaridadePac
+  estCivilPac EstCivPac
+  fotoPac String?
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int @unique
+  endereco Endereco? @relation
+  evolucoesClinica EvolucaoClinica[] @relation
+  atendimentos Atendimento[] @relation
+}
+
+enum UnidadeFederativaEnd {
+  AC
+  AL
+  AM
+  BA
+  CE
+  ES
+  GO
+  MA
+  MT
+  MS
+  MG
+  PA
+  PB
+  PR
+  PE
+  PI
+  RJ
+  RS
+  RO
+  RR
+  SC
+  SP
+  SE
+  TO
+  DF
+}
+
+model Endereco {
+  id Int @id @default(autoincrement())
+  ufEnd UnidadeFederativaEnd
+  cidadeEnd String
+  bairroEnd String
+  ruaEnd String
+  numeroEnd Int
+  paciente Paciente @relation(fields: [pacienteId], references: [id])
+  pacienteId Int @unique
+}
+
+enum AbordagemProf {
+  PSICANALISE @map("Psicanálise")
+  TERAPIA_COGNITIVO_COMPORTAMENTAL @map("Terapia Cognitivo-Comportamental")
+  GESTALT_TERAPIA @map("Gestalt-terapia")
+  ANALISE_DO_COMPORTAMENTO @map("Análise do Comportamento")
+  OUTRA @map("Outra")
+}
+
+enum FormacaoProf {
+  PSICOLOGIA @map("Psicologia")
+  PSIQUIATRA @map("Psiquiatria")
+  TERAPIA_OCUPACIONAL @map("Terapia Ocupacional")
+  OUTRO @map("Outro")
+}
+
+model Profissional {
+  id Int @id @default(autoincrement())
+  nomeProf String
+  cpfProf String
+  rgProf String
+  celularProf String
+  abordagemProf AbordagemProf
+  formacaoProf FormacaoProf
+  matriculaProf String
+  localizacaoProf String
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int @unique
+  evolucoesClinica EvolucaoClinica[] @relation
+  atendimentos Atendimento[] @relation
+}
+
+model EvolucaoClinica {
+  id Int @id @default(autoincrement())
+  dataCadastroEvolClin DateTime @default(now())
+  relatorioEvolClin String
+  ajusteTratamentoEvolClin String?
+  histFamiEvolClin String
+  problEvolClin String
+  medicEvolClin String
+  qualSonoEvolClin String?
+  apetiteEvolClin String?
+  pensNegEvolClin String?
+  paciente Paciente @relation(fields: [pacienteId], references: [id])
+  pacienteId Int
+  profissional Profissional @relation(fields: [profissionalId], references: [id])
+  profissionalId Int
+  atendimento Atendimento? @relation(fields: [atendimentoId], references: [id])
+  atendimentoId Int? @unique
+}
+
+model Grupo_apoio {
+  id Int @id @default(autoincrement())
+  nome_grupo String
+  descricao_grupo String
+  regiao_grupo String
+}
+
+model Depoimento {
+  id Int @id @default(autoincrement())
+  descricaoDep String
+  dataHoraDep DateTime
+}
+
+enum StatusAtendimento {
+  Agendado
+  Realizado
+  Cancelado
+}
+
+model Atendimento {
+  id Int @id @default(autoincrement())
+  dataHoraAtend DateTime
+  statusAtend StatusAtendimento
+  avaliacaoAtend String?
+  paciente Paciente @relation(fields: [pacienteId], references: [id])
+  pacienteId Int
+  profissional Profissional @relation(fields: [profissionalId], references: [id])
+  profissionalId Int
+  evolucoesClinica EvolucaoClinica?
+}
