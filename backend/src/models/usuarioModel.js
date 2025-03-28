@@ -1,16 +1,24 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
+//função desativada para que os dados não fiquem expostos
 const listarUsuarios = async () => {
-  return prisma.usuario.findMany();
+  return prisma.usuario.findMany({
+    select: {
+      id: true,
+      emailUsuar: true,
+      tipoUsuar: true,
+    },
+  });
 };
 
 const buscarUsuarioPorId = async (id) => {
   const usuario = await prisma.usuario.findUnique({
     where: { id },
-    include: {
-      paciente: true,  // Inclui o relacionamento com paciente
-      profissional: true,  // Inclui o relacionamento com profissional
+    select: {
+      id: true,
+      emailUsuar: true,
+      tipoUsuar: true,
     },
   });
 
@@ -22,7 +30,6 @@ const buscarUsuarioPorId = async (id) => {
 };
 
 const adicionarUsuario = async ({ emailUsuar, senhaUsuar, tipoUsuar }) => {
-  // Verificando se o email já está cadastrado
   const usuarioExistente = await prisma.usuario.findUnique({
     where: { emailUsuar },
   });
@@ -41,14 +48,6 @@ const adicionarUsuario = async ({ emailUsuar, senhaUsuar, tipoUsuar }) => {
 };
 
 const atualizarUsuario = async (id, { emailUsuar, senhaUsuar, tipoUsuar }) => {
-  const usuario = await prisma.usuario.findUnique({
-    where: { id },
-  });
-
-  if (!usuario) {
-    throw new Error('Usuário não encontrado!');
-  }
-
   return await prisma.usuario.update({
     where: { id },
     data: {
@@ -60,21 +59,11 @@ const atualizarUsuario = async (id, { emailUsuar, senhaUsuar, tipoUsuar }) => {
 };
 
 const excluirUsuario = async (id) => {
-  const usuario = await prisma.usuario.findUnique({
-    where: { id },
-  });
-
-  if (!usuario) {
-    throw new Error('Usuário não encontrado');
-  }
-
-  await prisma.usuario.delete({
-    where: { id },
-  });
+  await prisma.usuario.delete({ where: { id } });
 };
 
 module.exports = {
-  listarUsuarios,
+  //listarUsuarios, //Desativado para evitar exposição de dados
   buscarUsuarioPorId,
   adicionarUsuario,
   atualizarUsuario,
