@@ -29,9 +29,6 @@ function CadPaciente() {
                         <Link to="/">
                             <button className="botao-paciente">Página Inicial</button>
                         </Link>
-                        <Link to="/anamnese">
-                            <button className="botao-paciente">Prencher Anamnese</button>
-                        </Link>
                     </div>
                 </div>
             </div>

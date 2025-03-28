@@ -7,15 +7,6 @@ const DadosPessoais = ({ formData, handleChange }) => (
   <>
     <label>Nome completo:</label>
     <input type="text" name="nome" value={formData.nome} onChange={handleChange} required />
-
-    <label>E-mail:</label>
-    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-
-    <label>Senha:</label>
-    <input type="password" name="senha" value={formData.senha} onChange={handleChange} required />
-
-    <label>Confirme sua senha:</label>
-    <input type="password" name="confirmarSenha" value={formData.confirmarSenha} onChange={handleChange} required />
   </>
 );
 
@@ -27,8 +18,8 @@ const DadosDocumentos = ({ formData, handleChange }) => (
     <label>RG:</label>
     <input type="text" name="rg" value={formData.rg} onChange={handleChange} required />
 
-    <label>CRM:</label>
-    <input type="text" name="crm" value={formData.crm} onChange={handleChange} />
+    <label>Matrícula Profissional:</label>
+    <input type="text" name="matriculaProfissional" value={formData.matriculaProfissional} onChange={handleChange} />
   </>
 );
 
@@ -36,9 +27,6 @@ const DadosContato = ({ formData, handleChange }) => (
   <>
     <label>Telefone principal:</label>
     <input type="text" name="telefonePrincipal" value={formData.telefonePrincipal} onChange={handleChange} required />
-
-    <label>Telefone secundário (opcional):</label>
-    <input type="text" name="telefoneSecundario" value={formData.telefoneSecundario} onChange={handleChange} />
   </>
 );
 
@@ -56,24 +44,6 @@ const DadosProfissionais = ({ formData, handleChange }) => (
       <option value="Outra">Outra</option>
     </select>
 
-    <label>Modalidades de atendimento:</label>
-    <select name="modalidade" value={formData.modalidade} onChange={handleChange} required>
-      <option value="">Selecione</option>
-      <option value="Online">Online</option>
-      <option value="Presencial">Presencial</option>
-      <option value="Ambas">Ambas</option>
-    </select>
-
-    <label>Idiomas:</label>
-    <select name="idiomas" value={formData.idiomas} onChange={handleChange} required>
-      <option value="">Selecione</option>
-      <option value="Português">Português</option>
-      <option value="Inglês">Inglês</option>
-      <option value="Espanhol">Espanhol</option>
-      <option value="Francês">Francês</option>
-      <option value="Outro">Outro</option>
-    </select>
-
     <label>Formação:</label>
     <select name="formacao" value={formData.formacao} onChange={handleChange} required>
       <option value="">Selecione</option>
@@ -82,32 +52,30 @@ const DadosProfissionais = ({ formData, handleChange }) => (
       <option value="Terapia Ocupacional">Terapia Ocupacional</option>
       <option value="Outro">Outro</option>
     </select>
+
+    <label>Localização (Região geográfica que atende):</label>
+    <input type="text" name="localizacao" value={formData.localizacao} onChange={handleChange} required />
   </>
 );
 
 const CadastroProfissional = () => {
   const [formData, setFormData] = useState({
     nome: "",
-    email: "",
-    senha: "",
-    confirmarSenha: "",
     cpf: "",
     rg: "",
-    crm: "",
+    matriculaProfissional: "",
     telefonePrincipal: "",
-    telefoneSecundario: "",
     dataNascimento: "",
     genero: "",
     nacionalidade: "",
     abordagem: "",
-    modalidade: "",
-    idiomas: "",
     formacao: "",
     especialidade: "",
     faixaEtaria: "",
     areaAtuacao: "",
     tempoAtuacao: "",
     experiencia: "",
+    localizacao: "",
   });
 
   const handleChange = (e) => {
@@ -133,11 +101,6 @@ const CadastroProfissional = () => {
             <button className="botao-cadastro" type="submit">Finalizar Cadastro</button>
           </div>
         </form>
-        <div className="divBotao">
-          <Link to="/">
-            <button className="botao-cadastro">Página Inicial</button>
-          </Link>
-        </div>
       </div>
     </>
   );

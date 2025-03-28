@@ -4,7 +4,6 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h1>logomarca</h1>
         <form>
           <div className="form-group">
             <label htmlFor="email">Usuário/e-mail:</label>
@@ -16,9 +15,9 @@ const Login = () => {
           </div>
           <button type="submit">Entrar</button>
         </form>
-        <p>Ainda não tem conta? <a href="#">Faça seu cadastro!</a></p>
+        <p>Ainda não tem conta? <a href="/cadastro">Faça seu cadastro!</a></p>
         <div className="links">
-          <a href="#">Preciso de ajuda</a> | <a href="#">Esqueci a senha</a>
+          <a href="/ajuda">Preciso de ajuda</a> | <a href="#">Esqueci a senha</a>
         </div>
       </div>
     </div>

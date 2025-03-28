@@ -6,7 +6,7 @@
   gap: 24px; /* Espaço entre a imagem e o box de busca */
   padding: 16px;
   max-width: 1100px; /* Define um limite para evitar que fique muito largo */
-  margin: 0 auto; /* Centraliza na tela */
+  margin: auto auto; /* Centraliza na tela */
 }
   
   /* Div para a imagem */
@@ -16,7 +16,7 @@
   }
 
   .imagem-container img {
-    width: 150%; /* Faz a imagem ocupar todo o espaço disponível */
+    width: 200%; /* Faz a imagem ocupar todo o espaço disponível */
     height: auto;
     border-radius: 8px;
   }

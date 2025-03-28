@@ -67,7 +67,7 @@ input[type="date"] {
 }
 
 button {
-  background-color: #4CAF50; /* Verde */
+  background-color: #0069d9;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -78,10 +78,10 @@ button {
 }
 
 button:hover {
-  background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+  background-color: #1079e8;
 }
 
 textarea {
   height: 150px;
-  resize: vertical; /* Permite redimensionar verticalmente */
+  resize: vertical;
 }
