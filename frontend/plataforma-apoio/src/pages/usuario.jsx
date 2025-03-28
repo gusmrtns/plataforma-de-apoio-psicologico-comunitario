@@ -10,7 +10,7 @@ const Usuario = () => {
                 <p>imagem do perfil do usuário</p>
             </div>
             <h2>Nome de usuário</h2>
-            <P>N° de consultas:</P>
+            <p>N° de consultas:</p>
             <div className="circulo_menor">
                 <p>0</p>
             </div>
@@ -20,9 +20,6 @@ const Usuario = () => {
             <button className="botao_cima"><h1>Notificações</h1></button>
             <button className="botao_cent"><h1>Consultas marcadas</h1></button>
             <button className="botao_baixo"><h1>Histórico de consultas</h1></button>
-        </div>
-        <div>
-            <button className="retornar"><h1>Página inicial</h1></button>
         </div>
     </section>
 

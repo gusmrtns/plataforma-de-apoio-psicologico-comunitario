@@ -572,28 +572,27 @@ p {
             }
         }
     }
+    .ajuda-id {
+        font-size: 1em;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-family: "Instrument Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .bx-search {
+        margin-left: 0.5em;
+        font-size: 1em;
+    }
+    
+    .ajuda-id:hover {
+        background-color: #D9B9A0;
+        
 }
-
-.ajuda-id {
-    font-size: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-family: "Instrument Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-.bx-search {
-    margin-left: 0.5em;
-    font-size: 1em;
-}
-
-.ajuda-id:hover {
-    background-color: #D9B9A0;
-
 }
