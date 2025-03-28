@@ -67,7 +67,9 @@ const Home = () => {
           <div className="container-apoio">
             <i class='bx bxs-chat' ></i>
             <h1>Precisando de um apoio?<br></br>nossos <strong>grupos de apoio</strong> estão aqui por você</h1>
-
+            <div className="grupo-imagem">
+              <img src="./src/assets/grupo-apoio.jpg" alt="imagem grupo de apoio" />
+            </div>
             <ul>
               <li>Grupos de Apoio para Ansiedade</li>
               <li>Grupos de Apoio para Depressão</li>
