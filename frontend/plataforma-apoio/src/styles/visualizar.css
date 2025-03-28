@@ -21,19 +21,42 @@
     width: 1332px;
     justify-content: center;
     align-items: center;
-    background-color: #F4D9BD;
+    background-color: rgba(22, 73, 165, 1);
     border-radius: 22px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);  /*Sombra preta com 30% de opacidade */
 }
-
-.imagem_do_perfil {
-    justify-content: center;
+.imagem-perfil{
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    & h1{
+        font-size: 2em;
+        
+    }
+    & h3{
+        font-size: 1.5em;
+        color: black;
+        font-family: "Instrument Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+    }
+}
+.imagem_do_perfil {
     width: 322px;
     height: 322px;
     border-radius: 50%;
-    background-color: #5D87D2;
+    overflow: hidden;
+    background-color: white;
+
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .nume {
@@ -43,13 +66,8 @@
     width: 50px;
     height: auto;
     border-radius: 40%;
-    background-color: #5D87D2;
+    background-color: white;
 }
-
-
-.retornar:hover {
-    background-color: #C68C56; /* Azul escuro */
-  }
 
 .centro {
     display: flex;
@@ -65,9 +83,19 @@
     height: 800px;
     width: 1413px;
     align-items: center;
-    background-color: #F4D9BD;
+    background-color: #091D42;
     border-radius: 22px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);  /*Sombra preta com 30% de opacidade */
+
+    & h1{
+        color: #B9E1D9;
+        font-family: "Instrument Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+    }
 }
 
 .alinhamento {
@@ -79,10 +107,14 @@
     padding: 10px;
     height: auto;
     width: 1300px;
-    background-color: #F0BF8D;
+    background-color: white;
     border-radius: 12px;
-}
 
+    & h2{
+        font-size: 1.3em;
+        color: black;
+    }
+}
 .cap {
     display: flex;
     flex-direction: column;
@@ -91,9 +123,13 @@
     padding: 10px;
     height: 30px;
     width: auto;
-    background-color: #D9B9A0;
+    background-color: #D88656;
     border-radius: 22px;
     white-space: nowrap;
+
+    & h1{
+        color: black;
+    }
 }
 
 .direc {
