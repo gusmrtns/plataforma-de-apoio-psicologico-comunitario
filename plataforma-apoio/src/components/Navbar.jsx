@@ -18,7 +18,7 @@ const Navbar = () => {
         </ul>
         <ul className="nav-link-login">
           <Link to="/ajuda" className="btn-ajuda">Procurar Ajuda <i class='bx bx-search'></i></Link>
-          <Link to="/cadastroPaciente" className="signup">Criar conta</Link>
+          <Link to="/cadastro" className="signup">Criar conta</Link>
           <Link to="/Login" className="btn-login">Entrar</Link>
         </ul>
       </div>

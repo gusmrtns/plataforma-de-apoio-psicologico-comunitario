@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
 
 const Cadastro = () => {
       const [nome, setNome] = useState("");
       const [email, setEmail] = useState("");
       const [senha, setSenha] = useState("");
+      const [tipoUsuario, setTipoUsuario] = useState("paciente");
       const navigate = useNavigate();
   
       const validarNome = (e) => {
           const nomeValor = e.target.value;
           setNome(nomeValor);
-          if (!/^\w+\s+\w+/.test(nomeValor)) {
+          if (!/\w+\s+\w+/.test(nomeValor)) {
               e.target.setCustomValidity("Digite seu nome completo.");
           } else {
               e.target.setCustomValidity("");
@@ -41,10 +42,14 @@ const Cadastro = () => {
       };
   
       const handleSubmit = (e) => {
-          alert("Cadastro de paciente realizado com sucesso!");
-          navigate("/anamnese");
+          e.preventDefault();
+          if (tipoUsuario === "paciente") {
+              navigate("/cadastroPaciente");
+          } else {
+              navigate("/cadastroProfissional");
+          }
       };
-
+      
   return (
     <>
       <div className="container-cad-paciente">
@@ -78,7 +83,14 @@ const Cadastro = () => {
                 onChange={validarSenha}
                 required />
             </div>
-            <button className="botao-paciente" type="submit">Finalizar Cadastro</button>
+            <div className="form-group">
+              <label>Você é:</label>
+              <select value={tipoUsuario} onChange={(e) => setTipoUsuario(e.target.value)}>
+                <option value="paciente">Paciente</option>
+                <option value="profissional">Profissional</option>
+              </select>
+            </div>
+            <button className="botao-paciente" type="submit">Continuar Cadastro</button>
           </form>
           <div id="divBotoes">
             <Link to="/">

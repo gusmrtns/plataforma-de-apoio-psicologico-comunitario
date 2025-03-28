@@ -15,7 +15,7 @@ const Login = () => {
           </div>
           <button type="submit">Entrar</button>
         </form>
-        <p>Ainda não tem conta? <a href="/cadastroPaciente">Faça seu cadastro!</a></p>
+        <p>Ainda não tem conta? <a href="/cadastro">Faça seu cadastro!</a></p>
         <div className="links">
           <a href="/ajuda">Preciso de ajuda</a> | <a href="#">Esqueci a senha</a>
         </div>

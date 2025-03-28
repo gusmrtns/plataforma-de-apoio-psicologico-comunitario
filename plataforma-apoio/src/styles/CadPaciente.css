@@ -48,3 +48,89 @@
     flex-direction: column;
 
 }
+
+@media (max-width: 768px) {
+    .container-cadastro-profissional {
+      padding: 15px;
+    }
+  
+    #divform-cadastro {
+      width: 100%;
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .botao-cadastro {
+      width: 100%;
+    }
+  
+    input, select {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    /* Ajuste específico para os campos de endereço */
+    .dados-endereco {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .dados-endereco input {
+      width: 90%;
+      font-size: 16px;
+      padding: 12px;
+    }
+  }
+  
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-cadastro-profissional {
+      padding: 15px;
+    }
+  
+    #divform-cadastro {
+      width: 100%;
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .botao-cadastro {
+      width: 100%;
+    }
+  
+    input, select {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .inputs-endereco {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #divform-cadastro {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input, select {
+      width: 90%;
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    .inputs-endereco {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  
