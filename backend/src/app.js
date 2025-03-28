@@ -7,6 +7,7 @@ const usuarioRoutes = require('./routes/usuarioRoutes');
 const pacienteRoutes = require('./routes/pacienteRoutes');
 const enderecoRoutes = require('./routes/enderecoRoutes');
 const evolucaoRoutes = require('./routes/evolucaoRoutes');
+const depoimentoRoutes = require('./routes/depoimentoRoutes');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use('/usuario', usuarioRoutes);
 app.use('/paciente', pacienteRoutes);
 app.use('/endereco', enderecoRoutes);
 app.use('/evolucao', evolucaoRoutes);
+app.use('/depoimento', depoimentoRoutes);
 
 
 module.exports = app;
