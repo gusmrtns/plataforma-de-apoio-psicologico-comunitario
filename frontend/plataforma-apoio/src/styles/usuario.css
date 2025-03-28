@@ -1,0 +1,133 @@
+.user_body {
+    margin: 30px;
+    background-color: #F1E7DD;
+}
+
+.divisor_cont {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.container_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    top: 20px;
+    align-items: center;
+}
+
+.container_2 {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    top: 20px;
+}
+
+.circulo {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 322px;
+    height: 322px;
+    border-radius: 50%;
+    background-color: #5D87D2;
+}
+
+.quadro_1 {
+    margin-top: 1em;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 520px;
+    height: 562px;
+    background-color: #FFFFFF;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.separar {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.quadro_2, .quadro_3, .quadro_4 {
+    height: 378px;
+    width: 978px;
+    border-radius: 12px;
+    background-color: #5D87D2;  
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.quadro_4 {
+    height: 278px;
+}
+
+.tell {
+    display: flex;
+    gap: 20px;
+}
+
+.quad_top, .quad_top2, .quad_top3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px 12px 0 0;
+    height: 40px;
+    justify-items: center;
+    background-color: rgba(22, 73, 165, 1);
+}
+
+.circulo_menor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    background-color: #5D87D2;
+}
+
+.botao, .botao_cima, .botao_cent, .botao_baixo, .retornar, .edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 542px;
+    height: 50px;
+    background-color: #E2AB77;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+.botao_baixo {
+    border-radius: 0 0 10px 10px;
+}
+
+.retornar {
+    width: 342px;
+    border-radius: 12px;
+}
+
+.edit {
+    left: 340px;
+    width: 300px;
+    height: 40px;
+}
+
+.botao_cima:hover, .botao_cent:hover, .botao_baixo:hover, .retornar:hover, .edit:hover {
+    background-color: #C68C56;
+}
+
+.grupo_but {
+    display: flex;
+    flex-direction: column;
+}
