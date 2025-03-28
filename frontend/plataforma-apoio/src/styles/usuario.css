@@ -16,6 +16,7 @@
     position: relative;
     top: 20px;
     align-items: center;
+    margin-top: 2em;
 }
 
 .container_2 {
@@ -24,6 +25,7 @@
     gap: 30px;
     flex-direction: column;
     top: 20px;
+    margin-top: 2em;
 }
 
 .circulo {
@@ -37,11 +39,12 @@
 }
 
 .quadro_1 {
+    margin-top: 1em;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 542px;
+    width: 520px;
     height: 562px;
     background-color: #FFFFFF;
     border-radius: 5%;
@@ -49,35 +52,21 @@
 }
 
 .separar {
-
     padding-left: 30px;
     display: flex;
     flex-direction: column;
 }
 
-.quadro_2 {
-    
+.quadro_2, .quadro_3, .quadro_4 {
     height: 378px;
     width: 978px;
     border-radius: 12px;
-    background-color: #E8D0B9;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-.quadro_3 {
-    height: 378px;
-    width: 978px;
-    border-radius: 12px;
-    background-color: #E8D0B9;
+    background-color: #5D87D2;  
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .quadro_4 {
     height: 278px;
-    width: 978px;
-    border-radius: 12px;
-    background-color: #E8D0B9;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .tell {
@@ -85,34 +74,14 @@
     gap: 20px;
 }
 
-.quad_top {
+.quad_top, .quad_top2, .quad_top3 {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 12px 12px 0 0;
     height: 40px;
     justify-items: center;
-    background-color: #E2AB77;
-}
-
-.quad_top2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px 12px 0 0;
-    height: 40px;
-    justify-items: center;
-    background-color: #E2AB77;
-}
-
-.quad_top3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px 12px 0 0;
-    height: 40px;
-    justify-items: center;
-    background-color: #E2AB77;
+    background-color: rgba(22, 73, 165, 1);
 }
 
 .circulo_menor {
@@ -125,107 +94,46 @@
     background-color: #5D87D2;
 }
 
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 542px;
-    height: 30px;
-    background-color: #D9D9D9;
-    border-radius: 9px;
-}
-
-.botao_cima {
+.botao, .botao_cima, .botao_cent, .botao_baixo, .retornar, .edit {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 542px;
     height: 50px;
     background-color: #E2AB77;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1em;
+    margin-left: 1em;
 }
-
-.botao_cima:hover {
-    background-color: #C68C56; /* Azul escuro */
-  }
-
-.botao_cent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 542px;
-    height: 50px;
-    background-color: #E2AB77;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-.botao_cent:hover {
-    background-color: #C68C56; /* Azul escuro */
-  }
 
 .botao_baixo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 542px;
-    height: 50px;
-    background-color: #E2AB77;
     border-radius: 0 0 10px 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
-
-.botao_baixo:hover {
-    background-color: #C68C56; /* Azul escuro */
-  }
 
 .retornar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 342px;
-    height: 50px;
-    background-color: #E2AB77;
     border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.retornar:hover {
-    background-color: #C68C56; /* Azul escuro */
-  }
+.edit {
+    left: 340px;
+    width: 300px;
+    height: 40px;
+}
+
+.botao_cima:hover, .botao_cent:hover, .botao_baixo:hover, .retornar:hover, .edit:hover {
+    background-color: #C68C56;
+}
 
 .grupo_but {
     display: flex;
     flex-direction: column;
+    
+    & button{
+        margin-bottom: 1em;
+    }
 }
-
-.edit {
-    position: relative;
-    left: 340px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 40px;
-    background-color: #E2AB77;
-    border-radius: 9px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-.edit:hover {
-    background-color: #C68C56; 
-  }
