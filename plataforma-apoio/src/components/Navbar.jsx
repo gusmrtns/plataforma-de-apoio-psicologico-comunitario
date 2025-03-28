@@ -11,9 +11,9 @@ const Navbar = () => {
           Plataforma HDC
         </Link>
         <ul className="nav-links">
-          <li><Link to="/">Início</Link></li>
-          <li><Link to="/buscar">Buscar Profissionais</Link></li>
-          <li><Link to="/cadastroProfissional">Cadastro Profissional</Link></li>
+          {/* <li><Link to="/">Início</Link></li> */}
+          {/* <li><Link to="/buscar">Buscar Profissionais</Link></li> */}
+          {/* <li><Link to="/cadastroProfissional">Cadastro Profissional</Link></li> */}
 
         </ul>
         <ul className="nav-link-login">
