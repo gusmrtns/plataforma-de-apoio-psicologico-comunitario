@@ -68,12 +68,14 @@ const Home = () => {
             <i class='bx bxs-chat' ></i>
             <h1>Precisando de um apoio?<br></br>nossos <strong>grupos de apoio</strong> estão aqui por você</h1>
 
-            <h2>Grupos de Apoio para Ansiedade</h2>
-            <h2>Grupos de Apoio para Depressão</h2>
-            <h2>Grupos de Apoio para Luto</h2>
-            <h2>Grupos de Apoio para Dependência Química (Álcool e Drogas)</h2>
-            <h2>Grupos de Apoio para Relações Abusivas</h2>
-            <h2>Grupos de Apoio para Pais e Cuidadores</h2>
+            <ul>
+              <li>Grupos de Apoio para Ansiedade</li>
+              <li>Grupos de Apoio para Depressão</li>
+              <li>Grupos de Apoio para Luto</li>
+              <li>Grupos de Apoio para Distúrbios do Sono</li>
+              <li>Grupos de Apoio para Relações Abusivas</li>
+              <li>Grupos de Apoio para Pais e Cuidadores</li>
+            </ul>
           </div>
         </section>
         <div className="container-ajuda">

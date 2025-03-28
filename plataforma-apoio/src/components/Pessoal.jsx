@@ -18,8 +18,7 @@ function Pessoal() {
         <>
             <div id="pessoal">
                 <h2>Identificação Pessoal</h2>
-                <section>
-                    <div className="inputs">
+                <section className="inputsP">
                         <input 
                         type="text" id="nomeC"
                         placeholder="Nome Completo"
@@ -27,8 +26,6 @@ function Pessoal() {
                         required
                         onInvalid={(e) => e.target.setCustomValidity("Por favor, preencha com seu nome completo.")}
                         onInput={(e) => e.target.setCustomValidity("")}/>
-                    </div>
-                    <div className="inputs">
                         <InputMask
                         mask="999.999.999-99"
                         value={cpf}
@@ -45,8 +42,6 @@ function Pessoal() {
                         onInput={(e) => e.target.setCustomValidity("")}>
                             {(inputProps) => <input {...inputProps} id="rg" type="text" placeholder="RG" required/>}
                         </InputMask>
-                    </div>
-                    <div className="inputs">
                         <InputMask
                         mask="(99) 9 9999-9999"
                         value={celular}
@@ -55,14 +50,10 @@ function Pessoal() {
                         onInput={(e) => e.target.setCustomValidity("")}>
                             {(inputProps) => <input {...inputProps} id="celular" type="text" placeholder="Celular" required />}
                         </InputMask>
-                    </div>
-                    <div className="inputs">
                         <input 
                         type="text" id="nomeResp1"
                         placeholder="Nome completo do Responsavél(opcional)"
                         onChange={(e) => setResp1(e.target.value)}/>
-                    </div>
-                    <div className="inputs">
                         <input 
                         type="text" id="genero"
                         placeholder="Gênero(opcional)"
@@ -71,7 +62,6 @@ function Pessoal() {
                         type="text" id="orientSex"
                         placeholder="Orientação Sexual(opcional)"
                         onChange={(e) => setOrienSex(e.target.value)}/>    
-                    </div>
                 </section>
                 <section>
                     <div className="inputs-select">
