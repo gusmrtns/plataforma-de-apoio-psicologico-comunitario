@@ -59,7 +59,7 @@ const adicionarPaciente = async ({
       nomeRespPac,
       generoPac,
       orienSexPac,
-      dataNascPac,
+      dataNascPac: new Date(dataNascPac), 
       escolaridadePac,
       estCivilPac,
       fotoPac,
